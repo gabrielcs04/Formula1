@@ -1,0 +1,590 @@
+/* Scroll suave */
+
+html {
+  scroll-behavior: smooth;
+}
+
+:target {
+  scroll-margin-top: 6rem;
+}
+
+/* Geral */
+
+body {  
+  background-color: #f1f3f5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Barra de rolagem */
+
+body::-webkit-scrollbar,
+.scroll-x::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+body::-webkit-scrollbar-track,
+.scroll-x::-webkit-scrollbar-track{
+  border-radius: 50px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb,
+.scroll-x::-webkit-scrollbar-thumb
+{
+  background-color: #15151e;
+  border: 1px solid #a8a8a8;
+  border-radius: 50px;
+}
+
+/* Cabeçalho */
+
+header {
+  background-color: #15151e;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+header .logo {
+  height: 50px;
+}
+
+header .nav {
+  list-style-type: none;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+header .nav li {
+  margin: 10px;
+}
+
+header .nav li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 22px;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+header .nav li a:hover {
+  background-color: #e10600;
+}
+
+/* Carrosel */
+
+main .carousel {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  background-color: #a8a8a8;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* História */
+
+.historia {
+  margin: auto 135px;
+}
+
+.historia h2 {
+  margin: 40px auto 0px;
+  text-align: center;
+  font-size: 60px;
+}
+
+.historia p {
+  font-size: 18px;
+  margin: 20px auto 40px;
+}
+
+/* Totalidades */
+
+#info {
+  height: 100%;
+  flex-wrap: wrap;
+  
+  background-color: #15151e;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-item {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-item .info-dado {
+  border: 10px solid #e10600;
+  padding: 30px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.info-item .info-descricao {
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* Titulos pistas, pilotos e equipes */
+
+#pistas .titulo,
+#pilotos .titulo,
+#equipes .titulo {
+  font-size: 50px;
+  margin: 40px 0 0 75px;
+}
+
+/* Efeito flip nos cards */
+
+.card-container {
+  display: inline-block;
+  margin: 0 15px 0 15px;
+  perspective: 1000px;
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.6s;
+  position: relative;
+}
+
+.card-container:hover .card-content {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #fff;
+  border-radius: 25px;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.card-back {
+  transform: rotatey(180deg);
+}
+
+/* Cards geral */
+
+.scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 30px 20px;
+  margin: 5px;
+}
+
+#pistas, #pilotos, #equipes {
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Card pistas geral */
+
+#pistas .card-container {
+  width: 376px;
+  height: 285px;
+}
+
+#pistas .card-front-content,
+#pistas .card-back-content {
+  padding: 25px;
+}
+
+/* Card pistas frente */
+
+#pistas .card-front-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#pistas .card-front-header img {
+  height: 56px;
+  width: 84px;
+}
+
+#pistas .card-front-header div {
+  margin: 0 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #a8a8a8 0%, #15151e 100%);
+  width: 100%;
+  height: 56px;
+}
+
+#pistas .card-front-header label {
+  font-weight: bold;
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+#pistas .card-front-body {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pistas .card-front-body img {
+  object-fit: contain;
+  max-height: 190px;
+  max-width: 100%;
+}
+
+/* Card pistas verso */
+
+#pistas .card-back-header h3 {
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+}
+
+#pistas .card-back-body div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#pistas .card-back-body div div {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #15151e;
+  border-right: 1px solid #15151e;
+  border-bottom-right-radius: 10px;
+  margin: 2px;
+  padding: 2px;
+}
+
+.primeiro-gp,
+.comp-circuito {
+  width: 180px;
+}
+
+.num-voltas,
+.dist-corrida {
+  width: 140px;
+}
+
+.volta-record {
+  width: 100%;
+}
+
+#pistas .card-back-body div div p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+#pistas .card-back-body div div label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Card piloto geral */
+
+#pilotos .card-container {
+  width: 256px;
+  height: 390px;
+}
+
+#pilotos .card-front-content {
+  padding: 0px;
+  height: 100%;
+}
+
+#pilotos .card-back-content {
+  padding: 25px;
+}
+
+/* Card piloto frente */
+
+#pilotos .card-front-header img {
+  width: 100%;
+  height: 100%;
+}
+
+#pilotos .card-front-body {
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 10px;
+  color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #15151e;
+}
+
+#pilotos .card-front-body h2 {
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+#pilotos .card-front-body h2 span {
+  font-weight: bold;
+}
+
+#pilotos .card-front-body h1 {
+  font-size: 70px;
+  margin: 0 5px;
+}
+
+/* Card piloto verso */
+
+#pilotos .card-back-header h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+#pilotos .card-back-body div {
+  border-bottom: 2px solid #15151e;
+  border-right: 1px solid #15151e;
+  border-bottom-right-radius: 10px;
+  padding: 2px;
+}
+
+#pilotos .card-back-body div p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+#pilotos .card-back-body div label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* Card equipes geral */
+
+#equipes .card-container {
+  width: 550px;
+  height: 285px;
+}
+
+#equipes .card-front-content,
+#equipes .card-back-content {
+  padding: 25px;
+}
+
+/* Card equipes frente */
+
+#equipes .card-front-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#equipes .card-front-header img {
+  height: 80px;
+  width: 100px;
+}
+
+#equipes .card-front-header div {
+  margin: 0 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #a8a8a8 0%, #15151e 100%);
+  width: 100%;
+  height: 56px;
+}
+
+#equipes .card-front-header label {
+  font-weight: bold;
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+#equipes .card-front-body {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#equipes .card-front-body img {
+  object-fit: contain;
+  max-height: 190px;
+  max-width: 100%;
+}
+
+/* Card equipes verso */
+
+#equipes .card-back-header h3 {
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+}
+
+#equipes .card-back-body div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#equipes .card-back-body div div {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #15151e;
+  border-right: 1px solid #15151e;
+  border-bottom-right-radius: 10px;
+  margin: 2px;
+  padding: 2px;
+}
+
+.chefe-equipe,
+.motor {
+  width: 160px;
+}
+
+.ano-entrada,
+.mundiais-equipe,
+.piloto {
+  width: 150px;
+}
+
+.base {
+  width: 100%;
+}
+
+#equipes .card-back-body div div p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+#equipes .card-back-body div div label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Rodapé */
+
+footer {
+  margin: 0;
+}
+
+/* Form Cadastro */
+
+#cadastro {
+  padding: 60px 60px 30px;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+#cadastro p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.formLine {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.formLine label {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 4px;
+  padding-left: 5px;
+}
+
+.formLine input {
+  font-size: 15px;
+  padding: 15px;
+  border: 1px solid #15151e;
+  border-radius: 5px;
+}
+
+
+.formLine #btnForm {
+  width: 150px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid #e10600;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #e10600;
+  transition: .3s;
+}
+
+.formLine #btnForm:hover {
+  background-color: #fff;
+  color: #e10600
+}
+
+/* Criador e redes sociais */
+
+#creditos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #15151e;
+  padding: 40px 135px;
+}
+
+#creditos #criador {
+  display: flex;
+  flex-direction: column;
+}
+
+#criador label {
+  color: #fff;
+  font-size: 18px;
+  padding: 3px;
+}
+
+#contato label {
+  font-size: 35px;
+  padding: 5px;
+}
+
+#contato label a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+#contato .facebook:hover {
+  color: #3b5998;
+  background-color: #fff;
+}
+
+#contato .github:hover {
+  color: #171515;
+  background-color: #fff;
+}
