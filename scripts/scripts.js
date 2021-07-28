@@ -8,19 +8,20 @@ function carregaDados() {
 }
 
 function carregaPistas() {
+  let aux = 0;
   let html = "";
   for (item of pistas) {
+    aux ++;
     const { local } = item;
     const { bandeira, pista } = item.imagens;
     const { nome, primeiro_gp, num_voltas, comp_circuito, dist_corrida, volta_record } = item.info;
 
     html += `
-      <div class="card-container">
-        <div class="card-content">
+      <input type="checkbox" class="clickCheck" id="clickCheck${aux}" onclick="flidCardClick(${aux})" />
+      <label class="card-container" for="clickCheck${aux}">
+        <div class="card-content" id="${aux}">
           <div class="card-front">
-
             <div class="card-front-content">
-              
               <div class="card-front-header">
                 <img src="./assets/bandeiras/${bandeira}" alt="Bandeira ${local}">
                 <div>
@@ -34,7 +35,6 @@ function carregaPistas() {
             </div>
           </div>
           <div class="card-back">
-
             <div class="card-back-content">
               <div class="card-back-header">
                 <h3>${nome}</h3>
@@ -74,7 +74,7 @@ function carregaPistas() {
           </div>
 
         </div>
-      </div>
+      </label>
     `;
   }
   document.querySelector("#lstPistas").innerHTML = html;
@@ -257,4 +257,21 @@ function inputCheck(input) {
     input.style.border = stylePadrao;
     return input.style.border;
   }
+}
+
+function flidCardClick(el) {
+  let checkBox = document.querySelector(`#clickCheck${el}`);
+  document.querySelectorAll(`.clickCheck`).forEach(checkItem => {
+    if (checkItem !== checkBox) {
+      checkItem.checked = false;
+    }
+  })
+  
+  document.querySelectorAll(".card-content").forEach(item => {
+    if(parseInt(item.id) === el) {
+      item.classList.add("clicado");
+    } else {
+      item.classList.remove("clicado");
+    }
+  })
 }

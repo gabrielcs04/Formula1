@@ -1,5 +1,4 @@
 /* Scroll suave */
-
 html {
   scroll-behavior: smooth;
 }
@@ -173,9 +172,17 @@ main .carousel {
   position: relative;
 }
 
-.card-container:hover .card-content {
+/* .card-container:hover .card-content {
+  transform: rotateY(180deg);
+} */
+
+.clickCheck:checked ~ .card-container .card-content.clicado {
   transform: rotateY(180deg);
 }
+
+/* .clickCheck {
+  display: none;
+} */
 
 .card-front,
 .card-back {
@@ -529,8 +536,8 @@ footer {
   border-radius: 5px;
 }
 
-input:focus {
-  outline: 0;
+.formLine input:focus {
+  outline: 1px solid #15151e;
 } 
 
 .formLine #btnForm {
