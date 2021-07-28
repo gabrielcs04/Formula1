@@ -237,3 +237,24 @@ function carregaInfos() {
   infos[1].innerHTML = pilotos.length;
   infos[2].innerHTML = equipes.length;
 }
+
+function validacaoForm() {
+  document.querySelectorAll('#formCadastro input').forEach(input => {
+    inputCheck(input)
+  });
+}
+
+function inputCheck(input) {
+  let stylePadrao = "1px solid #15151e";
+  let styleErro = "2px solid #e10600";
+
+  if(!input.checkValidity()) {
+    input.style.border = styleErro;
+    return input.style.border;
+  }
+
+  if(input.checkValidity()) {
+    input.style.border = stylePadrao;
+    return input.style.border;
+  }
+}
