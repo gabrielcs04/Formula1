@@ -9,12 +9,17 @@ html {
 }
 
 /* Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {  
   background-color: #f1f3f5;
-  box-sizing: border-box;
-  margin: 0;
+  /* margin: 0;
   padding: 0;
+  box-sizing: border-box; */
 }
 
 /* Barra de rolagem */
@@ -47,7 +52,8 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 99;
+  padding: 10px;
 }
 
 header .logo {
