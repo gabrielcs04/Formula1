@@ -1,3 +1,5 @@
+var aux = 0;
+
 carregaDados();
 
 function carregaDados() {
@@ -8,7 +10,6 @@ function carregaDados() {
 }
 
 function carregaPistas() {
-  let aux = 0;
   let html = "";
   for (item of pistas) {
     aux ++;
@@ -83,13 +84,15 @@ function carregaPistas() {
 function carregaPilotos() {
   let html = "";
   for (item of pilotos) {
+    aux ++;
     const { nome, sobrenome, numero } = item.piloto;
     const { foto } = item;
     const { equipe, pais, podios, mundiais, nascimento } = item.info;
 
     html += `
-      <div class="card-container">
-        <div class="card-content">
+      <input type="checkbox" class="clickCheck" id="clickCheck${aux}" onclick="flidCardClick(${aux})" />
+      <label class="card-container" for="clickCheck${aux}">
+        <div class="card-content" id="${aux}">
           <div class="card-front">
             <div class="card-front-content">
               <div class="card-front-header">
@@ -140,7 +143,7 @@ function carregaPilotos() {
             </div>
           </div>
         </div>
-      </div>
+      </label>
     `;
   }
   document.querySelector("#lstPilotos").innerHTML = html;
@@ -149,14 +152,15 @@ function carregaPilotos() {
 function carregaEquipes() {
   let html = "";
   for (item of equipes) {
+    aux ++;
     const { logo, carro } = item.imagens;
-    const { nomeCompleto, chefe, estreia, mundiais, motor, base } =
-      item.info;
+    const { nomeCompleto, chefe, estreia, mundiais, motor, base } = item.info;
     const { primeiro, segundo } = item.pilotos;
 
     html += `
-      <div class="card-container">
-        <div class="card-content">
+    <input type="checkbox" class="clickCheck" id="clickCheck${aux}" onclick="flidCardClick(${aux})" />
+      <label class="card-container" for="clickCheck${aux}">
+        <div class="card-content" id="${aux}">
           <div class="card-front">
             <div class="card-front-content">
               <div class="card-front-header">
@@ -224,7 +228,7 @@ function carregaEquipes() {
             </div>
           </div>
         </div>
-      </div>
+      </label>
     `;
   }
   document.querySelector("#lstEquipes").innerHTML = html;

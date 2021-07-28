@@ -172,17 +172,9 @@ main .carousel {
   position: relative;
 }
 
-/* .card-container:hover .card-content {
-  transform: rotateY(180deg);
-} */
-
-.clickCheck:checked ~ .card-container .card-content.clicado {
+.card-container:hover .card-content {
   transform: rotateY(180deg);
 }
-
-/* .clickCheck {
-  display: none;
-} */
 
 .card-front,
 .card-back {
@@ -601,3 +593,12 @@ footer {
   color: #171515;
   background-color: #fff;
 }
+/* Responsividade */
+
+.clickCheck:checked ~ .card-container .card-content.clicado {
+  transform: rotateY(180deg);
+}
+/* 
+.clickCheck {
+  display: none;
+} */
