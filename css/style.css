@@ -111,9 +111,13 @@ main .carousel {
   display: none;
 }
 
+.carousel-item.visivel {
+  display: block;
+}
+
 .carousel-item img {
   width: 100%;
-  height: 63vh;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -151,12 +155,14 @@ main .carousel {
   align-items: center;
   justify-content: center;
 }
+
 .circulos-container div {
   background-color: var(--cor-preto);
   margin: 2px;
   padding: 10px;
   border-radius: 5px;
 }
+
 .circulo {
   cursor: pointer;
   width: 15px;
@@ -217,14 +223,19 @@ main .carousel {
   align-items: center;
 }
 
+.barra {
+  background-color: var(--cor-principal);
+  border-radius: 50%;
+}
+
 .info-item .info-dado {
-  border: 10px solid var(--cor-principal);
-  padding: 30px;
+  background-color: var(--cor-preto);
+  padding: 30px 35px;
   border-radius: 50%;
   color: var(--cor-branco);
   font-weight: bold;
-  font-size: 30px;
-  margin: 10px;
+  font-size: 35px;
+  margin: 10px; 
 }
 
 .info-item .info-descricao {
@@ -677,3 +688,4 @@ footer {
 }
 
 /* Responsividade */
+

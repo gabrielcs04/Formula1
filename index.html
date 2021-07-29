@@ -27,45 +27,45 @@
     <main>
       <div class="carousel">
         <div class="carousel-container">
-          <div class="carousel-item animacao">
-            <img src="./assets/carousel/img01.jpg" alt="Imagem Carrosel 01">
+          <div class="carousel-item animacao visivel">
+            <img src="./assets/carousel/img01-min.jpg" alt="Imagem Carrosel 01">
           </div>
 
           <div class="carousel-item animacao">
-            <img src="./assets/carousel/img02.jpg" alt="Imagem Carrosel 02">
+            <img src="./assets/carousel/img02-min.jpg" alt="Imagem Carrosel 02">
           </div>
           
           <div class="carousel-item animacao">
-            <img src="./assets/carousel/img03.jpg" alt="Imagem Carrosel 03">
+            <img src="./assets/carousel/img03-min.jpg" alt="Imagem Carrosel 03">
           </div>
 
           <div class="carousel-item animacao">
-            <img src="./assets/carousel/img04.jpg" alt="Imagem Carrosel 04">
+            <img src="./assets/carousel/img04-min.jpg" alt="Imagem Carrosel 04">
           </div>
 
           <div class="carousel-item animacao">
-            <img src="./assets/carousel/img05.jpg" alt="Imagem Carrosel 05">
+            <img src="./assets/carousel/img05-min.jpg" alt="Imagem Carrosel 05">
           </div>
   
-          <a class="btnAnterior" onclick="mudaImg(-1)">&#10094;</a>
-          <a class="btnProximo" onclick="mudaImg(1)">&#10095;</a>
+          <a class="btnAnterior" onclick="trocaImagem(-1)">&#10094;</a>
+          <a class="btnProximo" onclick="trocaImagem(1)">&#10095;</a>
         </div>
 
         <div class="circulos-container">
           <div>
-            <span class="circulo" onclick="imgAtual(1)"></span> 
+            <span class="circulo ativo" data-circulo="0"></span> 
           </div>
           <div>
-            <span class="circulo" onclick="imgAtual(2)"></span>
+            <span class="circulo" data-circulo="1"></span>
           </div>
           <div>
-            <span class="circulo" onclick="imgAtual(3)"></span>
+            <span class="circulo" data-circulo="2"></span>
           </div>
           <div>
-            <span class="circulo" onclick="imgAtual(4)"></span> 
+            <span class="circulo" data-circulo="3"></span> 
           </div>
           <div>
-            <span class="circulo" onclick="imgAtual(5)"></span> 
+            <span class="circulo" data-circulo="4"></span> 
           </div>
         </div>
       </div>
@@ -88,17 +88,23 @@
 
       <div id="info">
         <div class="info-item">
-          <div class="info-dado">--</div>
-          <label class="info-descricao">Total de grandes prêmios</label>
+          <div class="barra">
+            <div class="info-dado">--</div>
+          </div>
+          <label class="info-descricao">Total de pistas</label>
         </div>
 
         <div class="info-item">
-          <div class="info-dado">--</div>
+          <div class="barra">
+            <div class="info-dado">--</div>
+          </div>
           <label class="info-descricao">Total de pilotos</label>
         </div>
 
         <div class="info-item">
-          <div class="info-dado">--</div>
+          <div class="barra">
+            <div class="info-dado">--</div>
+          </div>
           <label class="info-descricao">Total de equipes</label>
         </div>
       </div>

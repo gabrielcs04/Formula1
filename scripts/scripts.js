@@ -3,12 +3,12 @@ window.addEventListener('load', () => {
 });
 
 function init() {
-  atualizaCarousel(1);
+  atualizaCarousel();
   carregaInfos();
   carregaPistas();
   carregaPilotos();
   carregaEquipes();
-  inicializaEventos();
+  inicializaEventosCard();
 }
 
 function carregaInfos() {
@@ -237,7 +237,7 @@ function carregaEquipes() {
   document.querySelector("#lstEquipes").innerHTML = html;
 }
 
-function inicializaEventos() {
+function inicializaEventosCard() {
   document.querySelectorAll('.card-container').forEach(card => {
     card.addEventListener('mouseenter', (event) => {
       let item = event.currentTarget;
@@ -276,56 +276,62 @@ function inputCheck(input) {
   }
 }
 
-var imgIndex = 1;
-var time = 5000;
+let imgIndex = 0;
+const time = 5000;
+const totalImagens = document.querySelectorAll('.carousel-item').length;
 
-var carouselContinuo = setInterval(() => {
-  imgIndex ++;
-  atualizaCarousel(imgIndex);
+// Ações de click nos circulos do Carousel
+document.querySelectorAll('span[data-circulo]').forEach(item =>{
+  item.addEventListener('click', (event)=>{
+    imgIndex = event.target.getAttribute('data-circulo');
+    atualizaCarousel();
+    resetCarousel();
+  });
+});
+
+let carouselContinuo = setInterval(() => {
+  imgIndex++;
+  if(imgIndex > totalImagens-1)
+    imgIndex = 0;
+  atualizaCarousel();
 }, time);
 
-function mudaImg(n) {
-  atualizaCarousel(imgIndex += n);
-
+function resetCarousel() {
   clearInterval(carouselContinuo);
   carouselContinuo = setInterval(() => {
-    imgIndex ++;
-    atualizaCarousel(imgIndex);
+    imgIndex++;
+    if(imgIndex > totalImagens-1)
+      imgIndex = 0;
+    atualizaCarousel();
   }, time);
+}
+
+function trocaImagem(n) {
+  imgIndex += parseInt(n)
+  if(imgIndex > totalImagens-1)
+    imgIndex = 0;
+  if(imgIndex < 0)
+    imgIndex = totalImagens-1;
+  
+  atualizaCarousel();
+  resetCarousel();
 }
 
 function imgAtual(n) {
-  atualizaCarousel(imgIndex = n);
-
-  clearInterval(carouselContinuo);
-  carouselContinuo = setInterval(() => {
-    imgIndex ++;
-    atualizaCarousel(imgIndex);
-  }, time);
+  imgIndex = n;
+  atualizaCarousel();
+  resetCarousel();
 }
 
-function atualizaCarousel(n) {
-  let imagens = document.querySelectorAll(".carousel-item");
-  let circulos = document.querySelectorAll('.circulo');
+function atualizaCarousel() {
+  let imagemAtiva = document.querySelector(".carousel-item.visivel");
+  let circuloAtivo = document.querySelector('.circulo.ativo');
 
-  if (n > imagens.length) {
-    imgIndex = 1;
-  }
+  imagemAtiva?.classList.remove('visivel');
+  circuloAtivo?.classList.remove('ativo');
 
-  if (n < 1) {
-    imgIndex = imagens.length;
-  }
-
-  for (imagem of imagens) {
-    imagem.style.display = "none";
-  }
-
-  for (circulo of circulos) {
-    circulo.classList.remove('ativo');
-  }
-
-  imagens[imgIndex-1].style.display = "block";
-  circulos[imgIndex-1].classList.add('ativo');
+  document.querySelectorAll(".carousel-item")[imgIndex].classList.add('visivel');
+  document.querySelectorAll('.circulo')[imgIndex].classList.add('ativo');
 }
 
 // function ehMobile() {
