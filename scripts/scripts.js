@@ -1,26 +1,25 @@
-var aux = 0;
+window.addEventListener('load', () => {
+  init();
+});
 
-carregaDados();
-
-function carregaDados() {
+function init() {
   carregaInfos();
   carregaPistas();
   carregaPilotos();
   carregaEquipes();
+  inicializaEventos();
 }
 
 function carregaPistas() {
   let html = "";
-  for (item of pistas) {
-    aux ++;
+  for ([index, item] of pistas.entries()) {
     const { local } = item;
     const { bandeira, pista } = item.imagens;
     const { nome, primeiro_gp, num_voltas, comp_circuito, dist_corrida, volta_record } = item.info;
 
     html += `
-      <input type="checkbox" class="clickCheck" id="clickCheck${aux}" onclick="flidCardClick(${aux})" />
-      <label class="card-container" for="clickCheck${aux}">
-        <div class="card-content" id="${aux}">
+      <div class="card-container">
+        <div class="card-content">
           <div class="card-front">
             <div class="card-front-content">
               <div class="card-front-header">
@@ -73,9 +72,8 @@ function carregaPistas() {
               </div>
             </div>
           </div>
-
         </div>
-      </label>
+      </div>
     `;
   }
   document.querySelector("#lstPistas").innerHTML = html;
@@ -84,15 +82,13 @@ function carregaPistas() {
 function carregaPilotos() {
   let html = "";
   for (item of pilotos) {
-    aux ++;
     const { nome, sobrenome, numero } = item.piloto;
     const { foto } = item;
     const { equipe, pais, podios, mundiais, nascimento } = item.info;
 
     html += `
-      <input type="checkbox" class="clickCheck" id="clickCheck${aux}" onclick="flidCardClick(${aux})" />
-      <label class="card-container" for="clickCheck${aux}">
-        <div class="card-content" id="${aux}">
+      <div class="card-container">
+        <div class="card-content">
           <div class="card-front">
             <div class="card-front-content">
               <div class="card-front-header">
@@ -143,7 +139,7 @@ function carregaPilotos() {
             </div>
           </div>
         </div>
-      </label>
+      </div>
     `;
   }
   document.querySelector("#lstPilotos").innerHTML = html;
@@ -152,15 +148,13 @@ function carregaPilotos() {
 function carregaEquipes() {
   let html = "";
   for (item of equipes) {
-    aux ++;
     const { logo, carro } = item.imagens;
     const { nomeCompleto, chefe, estreia, mundiais, motor, base } = item.info;
     const { primeiro, segundo } = item.pilotos;
 
     html += `
-    <input type="checkbox" class="clickCheck" id="clickCheck${aux}" onclick="flidCardClick(${aux})" />
-      <label class="card-container" for="clickCheck${aux}">
-        <div class="card-content" id="${aux}">
+      <div class="card-container">
+        <div class="card-content">
           <div class="card-front">
             <div class="card-front-content">
               <div class="card-front-header">
@@ -228,7 +222,7 @@ function carregaEquipes() {
             </div>
           </div>
         </div>
-      </label>
+      </div>
     `;
   }
   document.querySelector("#lstEquipes").innerHTML = html;
@@ -263,19 +257,25 @@ function inputCheck(input) {
   }
 }
 
-function flidCardClick(el) {
-  let checkBox = document.querySelector(`#clickCheck${el}`);
-  document.querySelectorAll(`.clickCheck`).forEach(checkItem => {
-    if (checkItem !== checkBox) {
-      checkItem.checked = false;
-    }
-  })
-  
-  document.querySelectorAll(".card-content").forEach(item => {
-    if(parseInt(item.id) === el) {
-      item.classList.add("clicado");
-    } else {
-      item.classList.remove("clicado");
-    }
-  })
+function inicializaEventos() {
+  document.querySelectorAll('.card-container').forEach(card => {
+    card.addEventListener('mouseenter', (event) => {
+      let item = event.currentTarget;
+      item.classList.add('flip');
+    });
+
+    card.addEventListener('mouseleave', (event) => {
+      let item = event.currentTarget;
+      item.classList.remove('flip');
+    });
+    card.addEventListener('click', (event) => {
+      let item = event.currentTarget;
+      item.classList.add('flip');
+    });
+  });
 }
+
+// function ehMobile() {
+//   let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+//   return isMobile;
+// }

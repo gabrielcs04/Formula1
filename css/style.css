@@ -172,7 +172,7 @@ main .carousel {
   position: relative;
 }
 
-.card-container:hover .card-content {
+.card-container.flip .card-content {
   transform: rotateY(180deg);
 }
 
@@ -384,7 +384,6 @@ main .carousel {
   font-weight: bold;
 }
 
-
 /* Card equipes geral */
 
 #equipes .card-container {
@@ -594,11 +593,3 @@ footer {
   background-color: #fff;
 }
 /* Responsividade */
-
-.clickCheck:checked ~ .card-container .card-content.clicado {
-  transform: rotateY(180deg);
-}
-/* 
-.clickCheck {
-  display: none;
-} */
