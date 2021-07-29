@@ -608,7 +608,7 @@ const pilotos = [
       sobrenome: "Latifi",
       numero: "6"
     },
-    foto: "Latifi.png",
+    foto: "latifi.png",
     info: {
       equipe: "Williams",
       pais: "Canadá",
