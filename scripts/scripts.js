@@ -3,11 +3,20 @@ window.addEventListener('load', () => {
 });
 
 function init() {
+  atualizaCarousel(1);
   carregaInfos();
   carregaPistas();
   carregaPilotos();
   carregaEquipes();
   inicializaEventos();
+}
+
+function carregaInfos() {
+  let infos = document.querySelectorAll(".info-dado");
+
+  infos[0].innerHTML = pistas.length;
+  infos[1].innerHTML = pilotos.length;
+  infos[2].innerHTML = equipes.length;
 }
 
 function carregaPistas() {
@@ -228,12 +237,22 @@ function carregaEquipes() {
   document.querySelector("#lstEquipes").innerHTML = html;
 }
 
-function carregaInfos() {
-  let infos = document.querySelectorAll(".info-dado");
+function inicializaEventos() {
+  document.querySelectorAll('.card-container').forEach(card => {
+    card.addEventListener('mouseenter', (event) => {
+      let item = event.currentTarget;
+      item.classList.add('flip');
+    });
 
-  infos[0].innerHTML = pistas.length;
-  infos[1].innerHTML = pilotos.length;
-  infos[2].innerHTML = equipes.length;
+    card.addEventListener('mouseleave', (event) => {
+      let item = event.currentTarget;
+      item.classList.remove('flip');
+    });
+    card.addEventListener('click', (event) => {
+      let item = event.currentTarget;
+      item.classList.add('flip');
+    });
+  });
 }
 
 function validacaoForm() {
@@ -257,22 +276,56 @@ function inputCheck(input) {
   }
 }
 
-function inicializaEventos() {
-  document.querySelectorAll('.card-container').forEach(card => {
-    card.addEventListener('mouseenter', (event) => {
-      let item = event.currentTarget;
-      item.classList.add('flip');
-    });
+var imgIndex = 1;
+var time = 5000;
 
-    card.addEventListener('mouseleave', (event) => {
-      let item = event.currentTarget;
-      item.classList.remove('flip');
-    });
-    card.addEventListener('click', (event) => {
-      let item = event.currentTarget;
-      item.classList.add('flip');
-    });
-  });
+var carouselContinuo = setInterval(() => {
+  imgIndex ++;
+  atualizaCarousel(imgIndex);
+}, time);
+
+function mudaImg(n) {
+  atualizaCarousel(imgIndex += n);
+
+  clearInterval(carouselContinuo);
+  carouselContinuo = setInterval(() => {
+    imgIndex ++;
+    atualizaCarousel(imgIndex);
+  }, time);
+}
+
+function imgAtual(n) {
+  atualizaCarousel(imgIndex = n);
+
+  clearInterval(carouselContinuo);
+  carouselContinuo = setInterval(() => {
+    imgIndex ++;
+    atualizaCarousel(imgIndex);
+  }, time);
+}
+
+function atualizaCarousel(n) {
+  let imagens = document.querySelectorAll(".carousel-item");
+  let circulos = document.querySelectorAll('.circulo');
+
+  if (n > imagens.length) {
+    imgIndex = 1;
+  }
+
+  if (n < 1) {
+    imgIndex = imagens.length;
+  }
+
+  for (imagem of imagens) {
+    imagem.style.display = "none";
+  }
+
+  for (circulo of circulos) {
+    circulo.classList.remove('ativo');
+  }
+
+  imagens[imgIndex-1].style.display = "block";
+  circulos[imgIndex-1].classList.add('ativo');
 }
 
 // function ehMobile() {

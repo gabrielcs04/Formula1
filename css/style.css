@@ -4,9 +4,9 @@
 /* Paleta de cores */
 :root {
   --cor-fundo: #f1f3f5;
-  --cor-primaria-forte: #15151e;
-  --cor-primaria-media: #a8a8a8;
-  --cor-primaria-clara: #ffffff;
+  --cor-preto: #15151e;
+  --cor-cinza: #a8a8a8;
+  --cor-branco: #ffffff;
   --cor-principal: #e10600;
   --cor-facebook: #3b5998;
   --cor-github: #171515;
@@ -50,15 +50,15 @@ body::-webkit-scrollbar-track,
 body::-webkit-scrollbar-thumb,
 .scroll-x::-webkit-scrollbar-thumb
 {
-  background-color: var(--cor-primaria-forte);
-  border: 1px solid var(--cor-primaria-media);
+  background-color: var(--cor-preto);
+  border: 1px solid var(--cor-cinza);
   border-radius: 50px;
 }
 
 /* Cabeçalho */
 
 header {
-  background-color: var(--cor-primaria-forte);
+  background-color: var(--cor-preto);
   display: flex;
   align-items: center;
   position: sticky;
@@ -86,7 +86,7 @@ header .nav li a {
   text-decoration: none;
   font-weight: bold;
   padding: 22px;
-  color: var(--cor-primaria-clara);
+  color: var(--cor-branco);
   font-size: 20px;
   transition: 0.3s;
 }
@@ -99,15 +99,78 @@ header .nav li a:hover {
 
 main .carousel {
   width: 100%;
-  height: 450px;
-  display: flex;
-  background-color: var(--cor-primaria-media);
 }
 
-.carousel img {
+.carousel-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.carousel-item {
+  display: none
+}
+
+.carousel-item img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  vertical-align: middle;
+}
+
+.btnAnterior, .btnProximo {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 15px;
+  margin-top: -50px;
+  color: var(--cor-branco);
+  font-weight: bold;
+  font-size: 25px;
+  transition: .3s ease;
+  user-select: none;
+}
+
+.btnAnterior {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.btnProximo {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.btnAnterior:hover, .btnProximo:hover {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.circulos-container {
+  text-align: center;
+}
+
+.circulo {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  margin: 20px 2px;
+  background: var(--cor-cinza);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color .4s ease;
+}
+
+.ativo, .circulo:hover {
+  background-color: var(--cor-principal);
+}
+
+.animacao {
+  animation-name: desaparecer;
+  animation-duration: 1.5s;
+}
+
+@keyframes desaparecer {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 
 /* História */
@@ -132,7 +195,7 @@ main .carousel {
 #info {
   height: 100%;
   flex-wrap: wrap;  
-  background-color: var(--cor-primaria-forte);
+  background-color: var(--cor-preto);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -149,14 +212,14 @@ main .carousel {
   border: 10px solid var(--cor-principal);
   padding: 30px;
   border-radius: 50%;
-  color: var(--cor-primaria-clara);
+  color: var(--cor-branco);
   font-weight: bold;
   font-size: 30px;
   margin: 10px;
 }
 
 .info-item .info-descricao {
-  color: var(--cor-primaria-clara);
+  color: var(--cor-branco);
   font-weight: bold;
   font-size: 25px;
 }
@@ -196,7 +259,7 @@ main .carousel {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background-color: var(--cor-primaria-clara);
+  background-color: var(--cor-branco);
   border-radius: 25px;
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
 }
@@ -249,14 +312,14 @@ main .carousel {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, var(--cor-primaria-media) 0%, var(--cor-primaria-forte) 100%);
+  background: linear-gradient(180deg, var(--cor-cinza) 0%, var(--cor-preto) 100%);
   width: 100%;
   height: 56px;
 }
 
 #pistas .card-front-header label {
   font-weight: bold;
-  color: var(--cor-primaria-clara);
+  color: var(--cor-branco);
   font-size: 25px;
   text-transform: uppercase;
 }
@@ -290,8 +353,8 @@ main .carousel {
 #pistas .card-back-body div div {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid var(--cor-primaria-forte);
-  border-right: 1px solid var(--cor-primaria-forte);
+  border-bottom: 2px solid var(--cor-preto);
+  border-right: 1px solid var(--cor-preto);
   border-bottom-right-radius: 10px;
   margin: 2px;
   padding: 2px;
@@ -350,10 +413,10 @@ main .carousel {
   justify-content: space-around;
   align-items: center;
   margin: 0 10px;
-  color: var(--cor-primaria-clara);
+  color: var(--cor-branco);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: var(--cor-primaria-forte);
+  background-color: var(--cor-preto);
 }
 
 #pilotos .card-front-body h2 {
@@ -382,8 +445,8 @@ main .carousel {
 }
 
 #pilotos .card-back-body div {
-  border-bottom: 2px solid var(--cor-primaria-forte);
-  border-right: 1px solid var(--cor-primaria-forte);
+  border-bottom: 2px solid var(--cor-preto);
+  border-right: 1px solid var(--cor-preto);
   border-bottom-right-radius: 10px;
   padding: 2px;
 }
@@ -428,14 +491,14 @@ main .carousel {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, var(--cor-primaria-media) 0%, var(--cor-primaria-forte) 100%);
+  background: linear-gradient(180deg, var(--cor-cinza) 0%, var(--cor-preto) 100%);
   width: 100%;
   height: 56px;
 }
 
 #equipes .card-front-header label {
   font-weight: bold;
-  color: var(--cor-primaria-clara);
+  color: var(--cor-branco);
   font-size: 25px;
   text-transform: uppercase;
 }
@@ -469,8 +532,8 @@ main .carousel {
 #equipes .card-back-body div div {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid var(--cor-primaria-forte);
-  border-right: 1px solid var(--cor-primaria-forte);
+  border-bottom: 2px solid var(--cor-preto);
+  border-right: 1px solid var(--cor-preto);
   border-bottom-right-radius: 10px;
   margin: 2px;
   padding: 2px;
@@ -537,12 +600,12 @@ footer {
 .formLine input {
   font-size: 15px;
   padding: 15px;
-  border: 1px solid var(--cor-primaria-forte);
+  border: 1px solid var(--cor-preto);
   border-radius: 5px;
 }
 
 .formLine input:focus {
-  outline: 1px solid var(--cor-primaria-forte);
+  outline: 1px solid var(--cor-preto);
 } 
 
 .formLine #btnForm {
@@ -552,13 +615,13 @@ footer {
   padding: 10px;
   border: 2px solid var(--cor-principal);
   border-radius: 5px;
-  color: var(--cor-primaria-clara);
+  color: var(--cor-branco);
   background-color: var(--cor-principal);
   transition: .3s;
 }
 
 .formLine #btnForm:hover {
-  background-color: var(--cor-primaria-clara);
+  background-color: var(--cor-branco);
   color: var(--cor-principal);
 }
 
@@ -569,7 +632,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--cor-primaria-forte);
+  background-color: var(--cor-preto);
   padding: 40px 135px;
 }
 
@@ -579,7 +642,7 @@ footer {
 }
 
 #criador label {
-  color: var(--cor-primaria-clara);
+  color: var(--cor-branco);
   font-size: 18px;
   padding: 3px;
 }
@@ -590,7 +653,7 @@ footer {
 }
 
 #contato label a {
-  color: var(--cor-primaria-clara);
+  color: var(--cor-branco);
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
@@ -599,12 +662,12 @@ footer {
 
 #contato .facebook:hover {
   color: var(--cor-facebook);
-  background-color: var(--cor-primaria-clara);
+  background-color: var(--cor-branco);
 }
 
 #contato .github:hover {
   color: var(--cor-github);
-  background-color: var(--cor-primaria-clara);
+  background-color: var(--cor-branco);
 }
 
 /* Responsividade */
