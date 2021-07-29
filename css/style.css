@@ -147,16 +147,24 @@ main .carousel {
 
 .circulos-container {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.circulos-container div {
+  background-color: var(--cor-preto);
+  margin: 2px;
+  padding: 10px;
+  border-radius: 5px;
+}
 .circulo {
   cursor: pointer;
   width: 15px;
   height: 15px;
-  margin: 20px 2px 0;
-  background: var(--cor-cinza);
+  margin: 0 3px;
+  background-color: var(--cor-cinza);
   border-radius: 50%;
-  display: inline-block;
+  display: block;
   transition: background-color .4s ease;
 }
 
@@ -165,11 +173,11 @@ main .carousel {
 }
 
 .animacao {
-  animation-name: desaparecer;
+  animation-name: esmaecer;
   animation-duration: 1.5s;
 }
 
-@keyframes desaparecer {
+@keyframes esmaecer {
   from {opacity: .4} 
   to {opacity: 1}
 }
@@ -656,7 +664,7 @@ footer {
 #contato label a {
   color: var(--cor-branco);
   text-decoration: none;
-  padding: 5px;
+  padding: 0 5px;
   border-radius: 5px;
   transition: .3s;
 }
