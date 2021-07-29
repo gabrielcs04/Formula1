@@ -384,7 +384,7 @@ main .carousel {
 }
 
 #pistas .card-back-body div div p {
-  margin: 10px 0;
+  padding: 4px 0;
   font-size: 16px;
 }
 
@@ -417,7 +417,7 @@ main .carousel {
 }
 
 #pilotos .card-front-body {
-  padding: 15px 25px;
+  padding: 5px 25px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -461,7 +461,7 @@ main .carousel {
 }
 
 #pilotos .card-back-body div p {
-  margin: 10px 0;
+  padding: 3px 0;
   font-size: 16px;
 }
 
@@ -548,15 +548,12 @@ main .carousel {
   padding: 2px;
 }
 
+.ano-entrada,
+.mundiais-equipe,
+.piloto,
 .chefe-equipe,
 .motor {
   width: 160px;
-}
-
-.ano-entrada,
-.mundiais-equipe,
-.piloto {
-  width: 150px;
 }
 
 .base {
@@ -564,7 +561,7 @@ main .carousel {
 }
 
 #equipes .card-back-body div div p {
-  margin: 10px 0;
+  padding: 4px 0;
   font-size: 16px;
 }
 
