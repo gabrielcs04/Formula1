@@ -9,8 +9,8 @@ const pistas = [
       nome: "Circuito Internacional do Bahrain",
       primeiro_gp: "2004",
       num_voltas: "57",
-      comp_circuito: "5.412 km",
-      dist_corrida: "308.238 km",
+      comp_circuito: "5,412 km",
+      dist_corrida: "308,238 km",
       volta_record: "1:31.447 Pedro de la Rosa (2005)"
     }
   },
@@ -24,8 +24,8 @@ const pistas = [
       nome: "Autódromo Enzo e Dino Ferrari",
       primeiro_gp: "1980",
       num_voltas: "63",
-      comp_circuito: "4.909 km",
-      dist_corrida: "309.049 km",
+      comp_circuito: "4,909 km",
+      dist_corrida: "309,049 km",
       volta_record: "1:15.484 Lewis Hamilton (2020)"
     }
   },
@@ -39,8 +39,8 @@ const pistas = [
       nome: "Autodromo Internacional do Algarve",
       primeiro_gp: "2020",
       num_voltas: "66",
-      comp_circuito: "4.653 km",
-      dist_corrida: "306.826 km",
+      comp_circuito: "4,653 km",
+      dist_corrida: "306,826 km",
       volta_record: "1:18.750 Lewis Hamilton (2020)"
     }
   },
@@ -54,8 +54,8 @@ const pistas = [
       nome: "Circuito de Barcelona-Catalunya",
       primeiro_gp: "1991",
       num_voltas: "66",
-      comp_circuito: "4.675 km",
-      dist_corrida: "308.424 km",
+      comp_circuito: "4,675 km",
+      dist_corrida: "308,424 km",
       volta_record: "1:18.149 Max Verstappen (2021)"
     }
   },
@@ -69,8 +69,8 @@ const pistas = [
       nome: "Circuito de Mônaco",
       primeiro_gp: "1950",
       num_voltas: "78",
-      comp_circuito: "3.337 km",
-      dist_corrida: "260.286 km",
+      comp_circuito: "3,337 km",
+      dist_corrida: "260,286 km",
       volta_record: "1:12.909 Lewis Hamilton (2021)"
     }
   },
@@ -84,8 +84,8 @@ const pistas = [
       nome: "Circuito Urbano de Baku",
       primeiro_gp: "2016",
       num_voltas: "51",
-      comp_circuito: "6.003 km",
-      dist_corrida: "306.049 km",
+      comp_circuito: "6,003 km",
+      dist_corrida: "306,049 km",
       volta_record: "1:43.009 Charles Leclerc (2019)"
     }
   },
@@ -99,8 +99,8 @@ const pistas = [
       nome: "Circuito Paul Ricard",
       primeiro_gp: "1971",
       num_voltas: "53",
-      comp_circuito: "5.842 km",
-      dist_corrida: "309.069 km",
+      comp_circuito: "5,842 km",
+      dist_corrida: "309,069 km",
       volta_record: "1:32.740 Sebastian Vettel (2019)"
     }
   },
@@ -114,8 +114,8 @@ const pistas = [
       nome: "Red Bull Ring",
       primeiro_gp: "1970",
       num_voltas: "71",
-      comp_circuito: "4.318 km",
-      dist_corrida: "306.452 km",
+      comp_circuito: "4,318 km",
+      dist_corrida: "306,452 km",
       volta_record: "1:05.619 Carlos Sainz (2020)"
     }
   },
@@ -129,8 +129,8 @@ const pistas = [
       nome: "Circuito de Silverstone",
       primeiro_gp: "1950",
       num_voltas: "52",
-      comp_circuito: "5.891 km",
-      dist_corrida: "306.198 km",
+      comp_circuito: "5,891 km",
+      dist_corrida: "306,198 km",
       volta_record: "1:27.097 Max Verstappen (2020)"
     }
   },
@@ -144,8 +144,8 @@ const pistas = [
       nome: "Hungaroring",
       primeiro_gp: "1986",
       num_voltas: "70",
-      comp_circuito: "4.381 km",
-      dist_corrida: "306.063 km",
+      comp_circuito: "4,381 km",
+      dist_corrida: "306,063 km",
       volta_record: "1:16.627 Lewis Hamilton (2020)"
     }
   },
@@ -159,8 +159,8 @@ const pistas = [
       nome: "Circuito de Spa-Francorchamps",
       primeiro_gp: "1950",
       num_voltas: "44",
-      comp_circuito: "7.004km",
-      dist_corrida: "308.052 km",
+      comp_circuito: "7,004 km",
+      dist_corrida: "308,052 km",
       volta_record: "1:46.286 Valtteri Bottas (2018)"
     }
   },
@@ -174,8 +174,8 @@ const pistas = [
       nome: "Circuito Zandvoort",
       primeiro_gp: "1952",
       num_voltas: "72",
-      comp_circuito: "4.259km",
-      dist_corrida: "306.648 km",
+      comp_circuito: "4,259 km",
+      dist_corrida: "306,648 km",
       volta_record: "Nenhuma"
     }
   },
@@ -189,8 +189,8 @@ const pistas = [
       nome: "Autódromo Nacional de Monza",
       primeiro_gp: "1950",
       num_voltas: "53",
-      comp_circuito: "5.793 km",
-      dist_corrida: "306.072 km",
+      comp_circuito: "5,793 km",
+      dist_corrida: "306,072 km",
       volta_record: "1:21.046 Rubens Barrichello (2004)"
     }
   },
@@ -204,8 +204,8 @@ const pistas = [
       nome: "Autódromo de Sóchi",
       primeiro_gp: "2014",
       num_voltas: "53",
-      comp_circuito: "5.848 km",
-      dist_corrida: "309.745 km",
+      comp_circuito: "5,848 km",
+      dist_corrida: "309,745 km",
       volta_record: "1:35.761 Lewis Hamilton (2019)"
     }
   },
@@ -219,8 +219,8 @@ const pistas = [
       nome: "Circuito Urbano de Manina Bay",
       primeiro_gp: "2008",
       num_voltas: "61",
-      comp_circuito: "5.063 km",
-      dist_corrida: "308.706 km",
+      comp_circuito: "5,063 km",
+      dist_corrida: "308,706 km",
       volta_record: "1:41.905 Kevin Magnussen (2018)"
     }
   },
@@ -234,8 +234,8 @@ const pistas = [
       nome: "Circuito de Suzuka",
       primeiro_gp: "1987",
       num_voltas: "53",
-      comp_circuito: "5.807 km",
-      dist_corrida: "307.471 km",
+      comp_circuito: "5,807 km",
+      dist_corrida: "307,471 km",
       volta_record: "1:30.983 Lewis Hamilton (2019)"
     }
   },
@@ -249,8 +249,8 @@ const pistas = [
       nome: "Circuito das Américas",
       primeiro_gp: "2012",
       num_voltas: "56",
-      comp_circuito: "5.513 km",
-      dist_corrida: "308.405 km",
+      comp_circuito: "5,513 km",
+      dist_corrida: "308,405 km",
       volta_record: "1:36.169 Charles Leclerc (2019)"
     }
   },
@@ -264,8 +264,8 @@ const pistas = [
       nome: "Autódromo Hermanos Rodríguez",
       primeiro_gp: "1963",
       num_voltas: "71",
-      comp_circuito: "4.304 km",
-      dist_corrida: "305.354 km",
+      comp_circuito: "4,304 km",
+      dist_corrida: "305,354 km",
       volta_record: "1:18.741 Valtteri Bottas (2018)"
     }
   },
@@ -279,8 +279,8 @@ const pistas = [
       nome: "Autódromo José Carlos Pace",
       primeiro_gp: "1973",
       num_voltas: "71",
-      comp_circuito: "4.309 km",
-      dist_corrida: "305.909 km",
+      comp_circuito: "4,309 km",
+      dist_corrida: "305,909 km",
       volta_record: "1:10.540 Valtteri Bottas (2018)"
     }
   },
@@ -294,8 +294,8 @@ const pistas = [
       nome: "Circuito do Grande Prêmio de Melbourne",
       primeiro_gp: "1996",
       num_voltas: "58",
-      comp_circuito: "5.303 km",
-      dist_corrida: "307.574 km",
+      comp_circuito: "5,303 km",
+      dist_corrida: "307,574 km",
       volta_record: "1:24.125 Michael Schumacher (2004)"
     }
   },
@@ -309,8 +309,8 @@ const pistas = [
       nome: "Circuito Urbano de Jeddah",
       primeiro_gp: "2021",
       num_voltas: "50",
-      comp_circuito: "6.175 km",
-      dist_corrida: "308.75 km",
+      comp_circuito: "6,175 km",
+      dist_corrida: "308,075 km",
       volta_record: "Nenhuma"
     }
   },
@@ -324,8 +324,8 @@ const pistas = [
       nome: "Circuito Yas Marina",
       primeiro_gp: "2009",
       num_voltas: "55",
-      comp_circuito: "5.554 km",
-      dist_corrida: "305.355 km",
+      comp_circuito: "5,554 km",
+      dist_corrida: "305,355 km",
       volta_record: "1:39.283 Lewis Hamilton (2019)"
     }
   },

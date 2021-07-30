@@ -311,7 +311,6 @@ main .carousel {
 
 #pistas, #pilotos, #equipes {
   white-space: nowrap;
-  user-select: none;
 }
 
 /* Card pistas geral */
@@ -398,8 +397,6 @@ main .carousel {
 }
 
 #pistas .card-back-body {
-  /* display: flex;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: 55% 45%;
   grid-template-areas: 
@@ -418,20 +415,6 @@ main .carousel {
   margin: 2px;
   padding: 2px;
 }
-
-/* .primeiro-gp,
-.comp-circuito {
-  width: 180px;
-}
-
-.num-voltas,
-.dist-corrida {
-  width: 140px;
-}
-
-.volta-record {
-  width: 100%;
-}  */
 
 #pistas .card-back-body div p {
   padding: 4px 0;
@@ -618,8 +601,6 @@ main .carousel {
 
 
 #equipes .card-back-body {
-  /* display: flex;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 
@@ -637,18 +618,6 @@ main .carousel {
   margin: 2px;
   padding: 2px;
 }
-
-/* .ano-entrada,
-.mundiais-equipe,
-.piloto,
-.chefe-equipe,
-.motor {
-  width: 160px;
-}
-
-.base {
-  width: 100%;
-} */
 
 #equipes .card-back-body div p {
   padding: 4px 0;
