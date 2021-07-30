@@ -253,6 +253,7 @@ main .carousel {
   color: var(--cor-branco);
   font-weight: bold;
   font-size: 25px;
+  text-align: center;
 }
 
 /* Titulos pistas, pilotos e equipes */
@@ -677,7 +678,6 @@ footer {
 
 #contato label {
   font-size: 35px;
-  padding: 5px;
 }
 
 #contato label a {
@@ -730,6 +730,21 @@ footer {
   .historia p {
     font-size: 18px;
   }
+  
+  #pistas .titulo,
+  #pilotos .titulo,
+  #equipes .titulo {
+    font-size: 45px;
+    margin: 40px 0 0 70px;
+  }
+  
+  .scroll-x {
+    padding: 25px 15px;
+  }
+
+  .card-container {
+    margin: 0 10px 0 10px;
+  }
 
   #cadastro {
     padding: 45px;
@@ -760,6 +775,20 @@ footer {
     font-size: 17px;
   }
 
+  #pistas .titulo,
+  #pilotos .titulo,
+  #equipes .titulo {
+    margin: 30px 0 0 55px;
+  }
+  
+  .scroll-x {
+    padding: 20px 5px;
+  }
+
+  .card-container {
+    margin: 0 10px 0 10px;
+  }
+
   #cadastro {
     padding: 35px;
     max-width: 85%;
@@ -784,6 +813,13 @@ footer {
   
   .historia p {
     font-size: 16px;
+  }
+
+  #pistas .titulo,
+  #pilotos .titulo,
+  #equipes .titulo {
+    font-size: 40px;
+    margin: 30px 0 0 50px;
   }
 
   #cadastro {
@@ -859,6 +895,21 @@ footer {
   
   .historia p {
     font-size: 16px;
+  }
+
+  #pistas .titulo,
+  #pilotos .titulo,
+  #equipes .titulo {
+    font-size: 35px;
+    margin: 20px 0 0 35px;
+  }
+  
+  .scroll-x {
+    padding: 10px 0px;
+  }
+
+  .card-container {
+    margin: 0 3px 0 3px;
   }
 
   #cadastro {
