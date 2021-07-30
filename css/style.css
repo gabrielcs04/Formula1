@@ -377,12 +377,39 @@ main .carousel {
   margin: 0;
 }
 
-#pistas .card-back-body div {
-  display: flex;
-  justify-content: space-between;
+.primeiro-gp {
+  grid-area: primeiro-gp;
 }
 
-#pistas .card-back-body div div {
+.comp-circuito {
+  grid-area: comp-circuito;
+}
+
+.num-voltas {
+  grid-area: num-voltas;
+}
+
+.dist-corrida {
+  grid-area: dist-corrida;
+}
+
+.volta-record {
+  grid-area: volta-record;
+}
+
+#pistas .card-back-body {
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-areas: 
+  "primeiro-gp num-voltas"
+  "comp-circuito dist-corrida"
+  "volta-record volta-record";
+}
+
+
+#pistas .card-back-body div {
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid var(--cor-preto);
@@ -392,7 +419,7 @@ main .carousel {
   padding: 2px;
 }
 
-.primeiro-gp,
+/* .primeiro-gp,
 .comp-circuito {
   width: 180px;
 }
@@ -404,14 +431,14 @@ main .carousel {
 
 .volta-record {
   width: 100%;
-}
+}  */
 
-#pistas .card-back-body div div p {
+#pistas .card-back-body div p {
   padding: 4px 0;
   font-size: 16px;
 }
 
-#pistas .card-back-body div div label {
+#pistas .card-back-body div label {
   font-weight: bold;
   font-size: 18px;
 }
@@ -474,6 +501,11 @@ main .carousel {
   margin: 0;
   text-align: center;
   font-size: 18px;
+}
+
+#pilotos .card-back-body {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 #pilotos .card-back-body div {
@@ -556,12 +588,47 @@ main .carousel {
   margin: 0;
 }
 
-#equipes .card-back-body div {
-  display: flex;
-  justify-content: space-between;
+.chefe-equipe {
+  grid-area: chefe-equipe;
 }
 
-#equipes .card-back-body div div {
+.ano-entrada {
+  grid-area: ano-entrada;
+}
+
+.mundiais-equipe {
+  grid-area: mundiais-equipe;
+}
+
+.motor {
+  grid-area: motor;
+}
+
+.prim-piloto {
+  grid-area: prim-piloto;
+}
+
+.seg-piloto {
+  grid-area: seg-piloto;
+}
+
+.base {
+  grid-area: base;
+}
+
+
+#equipes .card-back-body {
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+  "chefe-equipe ano-entrada mundiais-equipe"
+  "motor prim-piloto seg-piloto"
+  "base base base";
+}
+
+#equipes .card-back-body div {
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid var(--cor-preto);
@@ -571,7 +638,7 @@ main .carousel {
   padding: 2px;
 }
 
-.ano-entrada,
+/* .ano-entrada,
 .mundiais-equipe,
 .piloto,
 .chefe-equipe,
@@ -581,14 +648,14 @@ main .carousel {
 
 .base {
   width: 100%;
-}
+} */
 
-#equipes .card-back-body div div p {
+#equipes .card-back-body div p {
   padding: 4px 0;
   font-size: 16px;
 }
 
-#equipes .card-back-body div div label {
+#equipes .card-back-body div label {
   font-weight: bold;
   font-size: 18px;
 }

@@ -50,33 +50,29 @@ function carregaPistas() {
               </div>
 
               <div class="card-back-body">
-                <div>
-                  <div class="primeiro-gp">
-                    <p>Primeiro Grande Prêmio</p>
-                    <label>${primeiro_gp}</label>
-                  </div>
-                  <div class="num-voltas">
-                    <p>Número de voltas</p>
-                    <label>${num_voltas}</label>
-                  </div>
+                <div class="primeiro-gp">
+                  <p>Primeiro Grande Prêmio</p>
+                  <label>${primeiro_gp}</label>
                 </div>
                 
-                <div>
-                  <div class="comp-circuito">
-                    <p>Comprimento do circuito</p>
-                    <label>${comp_circuito}</label>
-                  </div>
-                  <div class="dist-corrida">
-                    <p>Distância da corrida</p>
-                    <label>${dist_corrida}</label>
-                  </div>
+                <div class="num-voltas">
+                  <p>Número de voltas</p>
+                  <label>${num_voltas}</label>
+                </div>
+              
+                <div class="comp-circuito">
+                  <p>Comprimento do circuito</p>
+                  <label>${comp_circuito}</label>
                 </div>
 
-                <div>
-                  <div class="volta-record">
-                    <p>Volta mais rápida</p>
-                    <label>${volta_record}</label>
-                  </div>
+                <div class="dist-corrida">
+                  <p>Distância da corrida</p>
+                  <label>${dist_corrida}</label>
+                </div>
+
+                <div class="volta-record">
+                  <p>Volta mais rápida</p>
+                  <label>${volta_record}</label>
                 </div>
               </div>
             </div>
@@ -191,41 +187,39 @@ function carregaEquipes() {
               </div>
 
               <div class="card-back-body">
-                <div>
-                  <div class="chefe-equipe">
-                    <p>Chefe de equipe</p>
-                    <label>${chefe}</label>
-                  </div>
-                  <div class="ano-entrada">
-                    <p>Ano de estreia</p>
-                    <label>${estreia}</label>
-                  </div>
-                  <div class="mundiais-equipe">
-                    <p>Mundiais</p>
-                    <label>${mundiais}</label>
-                  </div>
+                <div class="chefe-equipe">
+                  <p>Chefe de equipe</p>
+                  <label>${chefe}</label>
                 </div>
 
-                <div>
-                  <div class="motor">
-                    <p>Motor</p>
-                    <label>${motor}</label>
-                  </div>
-                  <div class="piloto">
-                    <p>Primeiro piloto</p>
-                    <label>${primeiro}</label>
-                  </div>
-                  <div class="piloto">
-                    <p>Segundo piloto</p>
-                    <label>${segundo}</label>
-                  </div>
+                <div class="ano-entrada">
+                  <p>Ano de estreia</p>
+                  <label>${estreia}</label>
                 </div>
 
-                <div>
-                  <div class="base">
-                    <p>Base</p>
-                    <label>${base}</label>
-                  </div>
+                <div class="mundiais-equipe">
+                  <p>Mundiais</p>
+                  <label>${mundiais}</label>
+                </div>
+
+                <div class="motor">
+                  <p>Motor</p>
+                  <label>${motor}</label>
+                </div>
+
+                <div class="piloto prim-piloto">
+                  <p>Primeiro piloto</p>
+                  <label>${primeiro}</label>
+                </div>
+
+                <div class="piloto seg-piloto">
+                  <p>Segundo piloto</p>
+                  <label>${segundo}</label>
+                </div>
+
+                <div class="base">
+                  <p>Base</p>
+                  <label>${base}</label>
                 </div>
               </div>
             </div>
@@ -337,7 +331,7 @@ document.querySelector('.btn-menu').addEventListener('click', event => {
   let iconeFechado = 'fa-times';
 
   event.target.parentNode.classList.toggle('menu-aberto');
-  
+
   if (event.target.classList.contains(iconeAberto)) {
     event.target.classList.remove(iconeAberto);
     event.target.classList.add(iconeFechado);
