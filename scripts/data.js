@@ -100,7 +100,7 @@ const pistas = [
       primeiro_gp: "1971",
       num_voltas: "53",
       comp_circuito: "5.842 km",
-      dist_corrida: "309.69 km",
+      dist_corrida: "309.069 km",
       volta_record: "1:32.740 Sebastian Vettel (2019)"
     }
   },
@@ -145,7 +145,7 @@ const pistas = [
       primeiro_gp: "1986",
       num_voltas: "70",
       comp_circuito: "4.381 km",
-      dist_corrida: "306.63 km",
+      dist_corrida: "306.063 km",
       volta_record: "1:16.627 Lewis Hamilton (2020)"
     }
   },
@@ -190,7 +190,7 @@ const pistas = [
       primeiro_gp: "1950",
       num_voltas: "53",
       comp_circuito: "5.793 km",
-      dist_corrida: "306.72 km",
+      dist_corrida: "306.072 km",
       volta_record: "1:21.046 Rubens Barrichello (2004)"
     }
   },
@@ -249,8 +249,8 @@ const pistas = [
       nome: "Circuito das Américas",
       primeiro_gp: "2012",
       num_voltas: "56",
-      comp_circuito: "5,513 km",
-      dist_corrida: "308,405 km",
+      comp_circuito: "5.513 km",
+      dist_corrida: "308.405 km",
       volta_record: "1:36.169 Charles Leclerc (2019)"
     }
   },
@@ -264,7 +264,7 @@ const pistas = [
       nome: "Autódromo Hermanos Rodríguez",
       primeiro_gp: "1963",
       num_voltas: "71",
-      comp_circuito: "4,304 km",
+      comp_circuito: "4.304 km",
       dist_corrida: "305.354 km",
       volta_record: "1:18.741 Valtteri Bottas (2018)"
     }
@@ -324,7 +324,7 @@ const pistas = [
       nome: "Circuito Yas Marina",
       primeiro_gp: "2009",
       num_voltas: "55",
-      comp_circuito: "5,554 km",
+      comp_circuito: "5.554 km",
       dist_corrida: "305.355 km",
       volta_record: "1:39.283 Lewis Hamilton (2019)"
     }

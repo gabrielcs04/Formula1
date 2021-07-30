@@ -1,6 +1,6 @@
-window.addEventListener('load', () => {
+window.onload = function()  {
   init();
-});
+}
 
 function init() {
   atualizaCarousel();
@@ -280,7 +280,6 @@ let imgIndex = 0;
 const time = 5000;
 const totalImagens = document.querySelectorAll('.carousel-item').length;
 
-// Ações de click nos circulos do Carousel
 document.querySelectorAll('span[data-circulo]').forEach(item =>{
   item.addEventListener('click', (event)=>{
     imgIndex = event.target.getAttribute('data-circulo');
@@ -312,7 +311,6 @@ function trocaImagem(n) {
     imgIndex = 0;
   if(imgIndex < 0)
     imgIndex = totalImagens-1;
-  
   atualizaCarousel();
   resetCarousel();
 }
@@ -333,6 +331,21 @@ function atualizaCarousel() {
   document.querySelectorAll(".carousel-item")[imgIndex].classList.add('visivel');
   document.querySelectorAll('.circulo')[imgIndex].classList.add('ativo');
 }
+
+document.querySelector('.btn-menu').addEventListener('click', event => {
+  let iconeAberto = 'fa-bars';
+  let iconeFechado = 'fa-times';
+
+  event.target.parentNode.classList.toggle('menu-aberto');
+  
+  if (event.target.classList.contains(iconeAberto)) {
+    event.target.classList.remove(iconeAberto);
+    event.target.classList.add(iconeFechado);
+  } else {
+    event.target.classList.remove(iconeFechado);
+    event.target.classList.add(iconeAberto);
+  }
+});
 
 // function ehMobile() {
 //   let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);

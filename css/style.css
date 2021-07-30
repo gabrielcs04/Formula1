@@ -59,8 +59,10 @@ body::-webkit-scrollbar-thumb,
 
 header {
   background-color: var(--cor-preto);
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  /* display: flex;
+  align-items: center; */
   position: sticky;
   top: 0;
   z-index: 99;
@@ -69,6 +71,16 @@ header {
 
 header .logo {
   height: 50px;
+}
+
+header .btn-area {
+  display: none;
+}
+
+header .btn-menu {
+  color: var(--cor-branco);
+  font-size: 25px;
+  display: inline-block;
 }
 
 header .nav {
@@ -689,3 +701,38 @@ footer {
 
 /* Responsividade */
 
+@media (max-width: 630px) {
+
+  header .nav {
+    display: none;
+    grid-area: nav;
+  }
+
+  header .logo {
+    height: 25px;
+    grid-area: logo;
+  }
+
+  header .btn-area {
+    display: block;
+    text-align: right;
+    grid-area: btn;
+  }
+
+  header {
+    grid-template-areas: 
+    "logo btn"
+		"nav nav";
+  }
+
+  .btn-area.menu-aberto ~ .nav  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  header .nav li a {
+    font-size: 16px;
+    padding: 8px;
+  }
+}
