@@ -97,7 +97,7 @@ header .nav li a {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
-  padding: 20px;
+  padding: 10px;
   color: var(--cor-branco);
   font-size: 20px;
   transition: 0.3s;
@@ -203,18 +203,17 @@ main .carousel {
 /* História */
 
 .historia {
-  margin: auto 135px;
+  margin: auto 135px 40px;
 }
 
 .historia h2 {
-  margin: 10px auto 0px;
+  margin: 10px auto;
   text-align: center;
   font-size: 60px;
 }
 
 .historia p {
   font-size: 18px;
-  margin: 20px auto 40px;
 }
 
 /* Totalidades */
@@ -277,7 +276,7 @@ main .carousel {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: 0.6s;
+  transition: .6s;
   position: relative;
 }
 
@@ -602,7 +601,7 @@ footer {
 /* Form Cadastro */
 
 #cadastro {
-  padding: 60px 60px 30px;
+  padding: 50px;
   max-width: 50%;
   margin: 0 auto;
 }
@@ -701,6 +700,115 @@ footer {
 
 /* Responsividade */
 
+@media (max-width: 1140px) {
+
+  .historia {
+    margin: auto 100px 30px;
+  }
+
+  #cadastro {
+    max-width: 70%;
+  }
+  
+  #creditos {
+    padding: 40px 100px;
+  }
+
+}
+
+@media (max-width: 945px) {
+
+  .historia {
+    margin: auto 80px 20px;
+  }
+
+  .historia h2 {
+    margin: 5px auto;
+    font-size: 50px;
+  }
+  
+  .historia p {
+    font-size: 18px;
+  }
+
+  #cadastro {
+    padding: 45px;
+    max-width: 80%;
+  }
+  
+  #creditos {
+    padding: 40px 80px;
+  }
+  
+  #contato label {
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width: 770px) {
+
+  .historia {
+    margin: auto 50px 15px;
+  }
+
+  .historia h2 {
+    margin: 5px auto;
+  }
+  
+  .historia p {
+    font-size: 17px;
+  }
+
+  #cadastro {
+    padding: 35px;
+    max-width: 85%;
+  }
+  
+  #creditos {
+    padding: 30px 50px;
+  }
+
+}
+
+@media (max-width: 665px) {
+
+  .historia {
+    margin: auto 30px 15px;
+  }
+
+  .historia h2 {
+    font-size: 40px;
+    margin: 5px auto;
+  }
+  
+  .historia p {
+    font-size: 16px;
+  }
+
+  #cadastro {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  #cadastro p {
+    font-size: 18px;
+  }
+  
+  .formLine label {
+    font-size: 17px;
+  }
+  
+  #creditos {
+    padding: 30px 30px;
+  }
+
+  #criador label {
+    font-size: 16px;
+  }
+
+}
+
 @media (max-width: 630px) {
 
   header .nav {
@@ -720,6 +828,7 @@ footer {
   }
 
   header {
+    padding: 12px 22px;
     grid-template-areas: 
     "logo btn"
 		"nav nav";
@@ -735,4 +844,42 @@ footer {
     font-size: 16px;
     padding: 8px;
   }
+}
+
+@media (max-width: 510px) {
+
+  .historia {
+    margin: auto 15px 20px;
+  }
+
+  .historia h2 {
+    font-size: 35px;
+    margin: 5px auto;
+  }
+  
+  .historia p {
+    font-size: 16px;
+  }
+
+  #cadastro {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  #cadastro p {
+    font-size: 17px;
+  }
+  
+  .formLine label {
+    font-size: 16px;
+  }
+  
+  #creditos {
+    padding: 30px 10px;
+  }
+
+  #criador label {
+    font-size: 15px;
+  }
+
 }
