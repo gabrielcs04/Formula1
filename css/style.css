@@ -736,7 +736,7 @@ footer {
 
 /* Responsividade */
 
-@media (max-width: 1140px) {
+@media (max-width: 1200px) {
 
   .historia {
     margin: auto 100px 30px;
@@ -752,7 +752,7 @@ footer {
 
 }
 
-@media (max-width: 945px) {
+@media (max-width: 992px) {
 
   .historia {
     margin: auto 80px 20px;
@@ -797,7 +797,7 @@ footer {
 
 }
 
-@media (max-width: 770px) {
+@media (max-width: 768px) {
 
   .historia {
     margin: auto 50px 15px;
@@ -836,52 +836,7 @@ footer {
 
 }
 
-@media (max-width: 665px) {
-
-  .historia {
-    margin: auto 30px 15px;
-  }
-
-  .historia h2 {
-    font-size: 40px;
-    margin: 5px auto;
-  }
-  
-  .historia p {
-    font-size: 16px;
-  }
-
-  #pistas .titulo,
-  #pilotos .titulo,
-  #equipes .titulo {
-    font-size: 40px;
-    margin: 30px 0 0 50px;
-  }
-
-  #cadastro {
-    padding: 30px;
-    max-width: 90%;
-  }
-
-  #cadastro p {
-    font-size: 18px;
-  }
-  
-  .formLine label {
-    font-size: 17px;
-  }
-  
-  #creditos {
-    padding: 30px 30px;
-  }
-
-  #criador label {
-    font-size: 16px;
-  }
-
-}
-
-@media (max-width: 630px) {
+@media (max-width: 576px) {
 
   header .nav {
     display: none;
@@ -916,9 +871,6 @@ footer {
     font-size: 16px;
     padding: 8px;
   }
-}
-
-@media (max-width: 510px) {
 
   .historia {
     margin: auto 15px 20px;
@@ -968,5 +920,4 @@ footer {
   #criador label {
     font-size: 15px;
   }
-
 }
