@@ -1,6 +1,6 @@
-window.onload = function()  {
+window.onload = function () {
   init();
-}
+};
 
 function init() {
   atualizaCarousel();
@@ -24,7 +24,14 @@ function carregaPistas() {
   for ([index, item] of pistas.entries()) {
     const { local } = item;
     const { bandeira, pista } = item.imagens;
-    const { nome, primeiro_gp, num_voltas, comp_circuito, dist_corrida, volta_record } = item.info;
+    const {
+      nome,
+      primeiro_gp,
+      num_voltas,
+      comp_circuito,
+      dist_corrida,
+      volta_record,
+    } = item.info;
 
     html += `
       <div class="card-container">
@@ -32,14 +39,14 @@ function carregaPistas() {
           <div class="card-front">
             <div class="card-front-content">
               <div class="card-front-header">
-                <img src="./assets/bandeiras/${bandeira}" alt="Bandeira ${local}">
+                <img loading="lazy" src="./assets/bandeiras/${bandeira}" alt="Bandeira ${local}">
                 <div>
                   <label>${local}</label>
                 </div>
               </div>
 
               <div class="card-front-body">
-                <img src="./assets/pistas/${pista}" alt="Pista ${local}">
+                <img loading="lazy" src="./assets/pistas/${pista}" alt="Pista ${local}">
               </div>
             </div>
           </div>
@@ -98,6 +105,7 @@ function carregaPilotos() {
             <div class="card-front-content">
               <div class="card-front-header">
                 <img
+                  loading="lazy"
                   src="./assets/pilotos/${foto}"
                   alt="Foto ${nome} ${sobrenome}"
                 />
@@ -164,6 +172,7 @@ function carregaEquipes() {
             <div class="card-front-content">
               <div class="card-front-header">
                 <img
+                  loading="lazy"
                   src="./assets/equipes/${logo}"
                   alt="Logo ${item.nome}"
                 />
@@ -174,6 +183,7 @@ function carregaEquipes() {
 
               <div class="card-front-body">
                 <img
+                  loading="lazy"
                   src="./assets/carros/${carro}"
                   alt="Carro ${item.nome}"
                 />
@@ -232,26 +242,26 @@ function carregaEquipes() {
 }
 
 function inicializaEventosCard() {
-  document.querySelectorAll('.card-container').forEach(card => {
-    card.addEventListener('mouseenter', (event) => {
+  document.querySelectorAll(".card-container").forEach((card) => {
+    card.addEventListener("mouseenter", (event) => {
       let item = event.currentTarget;
-      item.classList.add('flip');
+      item.classList.add("flip");
     });
 
-    card.addEventListener('mouseleave', (event) => {
+    card.addEventListener("mouseleave", (event) => {
       let item = event.currentTarget;
-      item.classList.remove('flip');
+      item.classList.remove("flip");
     });
-    card.addEventListener('click', (event) => {
+    card.addEventListener("click", (event) => {
       let item = event.currentTarget;
-      item.classList.add('flip');
+      item.classList.add("flip");
     });
   });
 }
 
 function validacaoForm() {
-  document.querySelectorAll('#formCadastro input').forEach(input => {
-    inputCheck(input)
+  document.querySelectorAll("#formCadastro input").forEach((input) => {
+    inputCheck(input);
   });
 }
 
@@ -259,12 +269,12 @@ function inputCheck(input) {
   let stylePadrao = "1px solid #15151e";
   let styleErro = "2px solid #e10600";
 
-  if(!input.checkValidity()) {
+  if (!input.checkValidity()) {
     input.style.border = styleErro;
     return input.style.border;
   }
 
-  if(input.checkValidity()) {
+  if (input.checkValidity()) {
     input.style.border = stylePadrao;
     return input.style.border;
   }
@@ -272,11 +282,12 @@ function inputCheck(input) {
 
 let imgIndex = 0;
 const time = 5000;
-const totalImagens = document.querySelectorAll('.carousel-item').length;
+const totalImagens = document.querySelectorAll(".carousel-item").length;
 
-document.querySelectorAll('span[data-circulo]').forEach(item =>{
-  item.addEventListener('click', (event)=>{
-    imgIndex = event.target.getAttribute('data-circulo');
+document.querySelectorAll("span[data-circulo]").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    let indice = event.target.getAttribute("data-circulo");
+    imgIndex = parseInt(indice);
     atualizaCarousel();
     resetCarousel();
   });
@@ -284,8 +295,7 @@ document.querySelectorAll('span[data-circulo]').forEach(item =>{
 
 let carouselContinuo = setInterval(() => {
   imgIndex++;
-  if(imgIndex > totalImagens-1)
-    imgIndex = 0;
+  if (imgIndex > totalImagens - 1) imgIndex = 0;
   atualizaCarousel();
 }, time);
 
@@ -293,44 +303,37 @@ function resetCarousel() {
   clearInterval(carouselContinuo);
   carouselContinuo = setInterval(() => {
     imgIndex++;
-    if(imgIndex > totalImagens-1)
-      imgIndex = 0;
+    if (imgIndex > totalImagens - 1) imgIndex = 0;
     atualizaCarousel();
   }, time);
 }
 
 function trocaImagem(n) {
-  imgIndex += parseInt(n)
-  if(imgIndex > totalImagens-1)
-    imgIndex = 0;
-  if(imgIndex < 0)
-    imgIndex = totalImagens-1;
-  atualizaCarousel();
-  resetCarousel();
-}
-
-function imgAtual(n) {
-  imgIndex = n;
+  imgIndex += parseInt(n);
+  if (imgIndex > totalImagens - 1) imgIndex = 0;
+  if (imgIndex < 0) imgIndex = totalImagens - 1;
   atualizaCarousel();
   resetCarousel();
 }
 
 function atualizaCarousel() {
   let imagemAtiva = document.querySelector(".carousel-item.visivel");
-  let circuloAtivo = document.querySelector('.circulo.ativo');
+  let circuloAtivo = document.querySelector(".circulo.ativo");
 
-  imagemAtiva?.classList.remove('visivel');
-  circuloAtivo?.classList.remove('ativo');
+  imagemAtiva.classList.remove("visivel");
+  circuloAtivo.classList.remove("ativo");
 
-  document.querySelectorAll(".carousel-item")[imgIndex].classList.add('visivel');
-  document.querySelectorAll('.circulo')[imgIndex].classList.add('ativo');
+  document
+    .querySelectorAll(".carousel-item")
+    [imgIndex].classList.add("visivel");
+  document.querySelectorAll(".circulo")[imgIndex].classList.add("ativo");
 }
 
-document.querySelector('.btn-menu').addEventListener('click', event => {
-  let iconeAberto = 'fa-bars';
-  let iconeFechado = 'fa-times';
+document.querySelector(".btn-menu").addEventListener("click", (event) => {
+  let iconeAberto = "fa-bars";
+  let iconeFechado = "fa-times";
 
-  event.target.parentNode.classList.toggle('menu-aberto');
+  event.target.parentNode.classList.toggle("menu-aberto");
 
   if (event.target.classList.contains(iconeAberto)) {
     event.target.classList.remove(iconeAberto);
