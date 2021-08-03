@@ -61,8 +61,6 @@ header {
   background-color: var(--cor-preto);
   display: grid;
   grid-template-columns: 200px 1fr;
-  /* display: flex;
-  align-items: center; */
   position: sticky;
   top: 0;
   z-index: 99;
@@ -116,7 +114,6 @@ main .carousel {
 .carousel-container {
   width: 100%;
   position: relative;
-
 }
 
 .carousel-item {
@@ -193,9 +190,16 @@ main .carousel {
 .animacao {
   animation-name: esmaecer;
   animation-duration: 1.5s;
+  -webkit-animation-name: esmaecer;
+  -webkit-animation-duration: 1.5s;
 }
 
 @keyframes esmaecer {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@-webkit-keyframes esmaecer {
   from {opacity: .4} 
   to {opacity: 1}
 }
@@ -237,9 +241,6 @@ main .carousel {
 .barra {
   background-color: var(--cor-principal);
   border-radius: 50%;
-  /* background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat; */
 }
 
 .info-item .info-dado {
