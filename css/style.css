@@ -237,6 +237,9 @@ main .carousel {
 .barra {
   background-color: var(--cor-principal);
   border-radius: 50%;
+  /* background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; */
 }
 
 .info-item .info-dado {
@@ -245,7 +248,7 @@ main .carousel {
   border-radius: 50%;
   color: var(--cor-branco);
   font-weight: bold;
-  font-size: 35px;
+  font-size: 45px;
   margin: 10px; 
 }
 
@@ -263,7 +266,14 @@ main .carousel {
 #equipes .titulo {
   font-size: 50px;
   margin: 40px 0 0 75px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+.titulo .img-icon {
+  height: 70px;
+} 
 
 /* Efeito flip nos cards */
 
@@ -674,6 +684,12 @@ footer {
   outline: 1px solid var(--cor-preto);
 } 
 
+.formLine:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 .formLine #btnForm {
   width: 150px;
   font-size: 18px;
@@ -774,6 +790,10 @@ footer {
     font-size: 45px;
     margin: 40px 0 0 70px;
   }
+
+  .titulo .img-icon {
+    height: 60px;
+  } 
   
   .scroll-x {
     padding: 25px 15px;
@@ -896,6 +916,10 @@ footer {
     font-size: 35px;
     margin: 20px 0 0 35px;
   }
+
+  .titulo .img-icon {
+    height: 45px;
+  } 
   
   .scroll-x {
     padding: 10px 0px;
@@ -915,6 +939,11 @@ footer {
   }
   
   .formLine label {
+    font-size: 16px;
+  }
+
+  .formLine #btnForm {
+    width: 100%;
     font-size: 16px;
   }
   
