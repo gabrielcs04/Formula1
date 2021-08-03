@@ -323,6 +323,7 @@ main .carousel {
 #pistas .card-front-content,
 #pistas .card-back-content {
   padding: 25px;
+  white-space: normal;
 }
 
 /* Card pistas frente */
@@ -838,6 +839,8 @@ footer {
 
 @media (max-width: 576px) {
 
+  /* Menu responsivo */
+
   header .nav {
     display: none;
     grid-area: nav;
@@ -871,6 +874,8 @@ footer {
     font-size: 16px;
     padding: 8px;
   }
+
+  /* Responsividade gerais */
 
   .historia {
     margin: auto 15px 20px;
@@ -921,3 +926,27 @@ footer {
     font-size: 15px;
   }
 }
+
+/* @media (max-width: 435px) {
+
+  #pistas .card-back-header h3 {
+    font-size: 16px;
+  }
+
+  #pistas .card-front-header label {
+    font-size: 20px;
+  }
+
+  #pistas .card-back-body div p {
+    font-size: 14px;
+  }
+  
+  #pistas .card-back-body div label {
+    font-size: 16px;
+  }
+
+  #pistas .card-back-content {
+    padding: 14px;
+  }
+
+} */

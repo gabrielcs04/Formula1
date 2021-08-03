@@ -24,14 +24,7 @@ function carregaPistas() {
   for ([index, item] of pistas.entries()) {
     const { local } = item;
     const { bandeira, pista } = item.imagens;
-    const {
-      nome,
-      primeiro_gp,
-      num_voltas,
-      comp_circuito,
-      dist_corrida,
-      volta_record,
-    } = item.info;
+    const { nome, primeiro_gp, num_voltas, comp_circuito, dist_corrida, volta_record } = item.info;
 
     html += `
       <div class="card-container">
@@ -323,9 +316,7 @@ function atualizaCarousel() {
   imagemAtiva.classList.remove("visivel");
   circuloAtivo.classList.remove("ativo");
 
-  document
-    .querySelectorAll(".carousel-item")
-    [imgIndex].classList.add("visivel");
+  document.querySelectorAll(".carousel-item")[imgIndex].classList.add("visivel");
   document.querySelectorAll(".circulo")[imgIndex].classList.add("ativo");
 }
 
