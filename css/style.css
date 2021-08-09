@@ -679,11 +679,13 @@ footer {
   padding: 15px;
   border: 1px solid var(--cor-preto);
   border-radius: 5px;
+  transition: .3s;
 }
 
 .formLine input:focus {
-  outline: 1px solid var(--cor-preto);
-} 
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
 
 .formLine:last-child {
   display: flex;
@@ -692,6 +694,7 @@ footer {
 }
 
 .formLine #btnForm {
+  cursor: pointer;
   width: 150px;
   font-size: 18px;
   font-weight: bold;
