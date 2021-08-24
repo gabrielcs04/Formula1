@@ -220,7 +220,7 @@ main .carousel {
   font-size: 18px;
 }
 
-/* Totalidades */
+/* Indicadores */
 
 #info {
   height: 100%;
@@ -238,16 +238,15 @@ main .carousel {
   align-items: center;
 }
 
-.barra {
-  background-color: var(--cor-principal);
-  border-radius: 50%;
-}
-
 .info-item .info-dado {
-  background-color: var(--cor-preto);
-  padding: 30px 35px;
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid var(--cor-principal);
   color: var(--cor-branco);
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
   font-weight: bold;
   font-size: 45px;
   margin: 10px; 
@@ -318,6 +317,47 @@ main .carousel {
   overflow-y: hidden;
   padding: 30px 20px;
   margin: 5px;
+}
+
+.conteudo {
+  position: relative;
+}
+
+.conteudo:hover > a {
+  display: flex;
+}
+
+.conteudo > a {
+  position: absolute;
+  top: 0px;
+  bottom: 13px;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  margin: 25px 0;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--cor-branco);
+  background-color: rgba(0, 0, 0, .3);
+  transition: .3s;
+}
+
+.conteudo > a:hover {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.conteudo .btn-right {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.conteudo .btn-left {
+  left: 0;
+  border-radius: 0 3px 3px 0;
 }
 
 #pistas, #pilotos, #equipes {
@@ -720,6 +760,7 @@ footer {
   align-items: center;
   background-color: var(--cor-preto);
   padding: 40px 135px;
+  gap: 10px;
 }
 
 #creditos #criador {
@@ -803,6 +844,12 @@ footer {
     padding: 25px 15px;
   }
 
+  .conteudo > a {
+    padding: 8px;
+    margin: 20px 0;
+    font-size: 23px;
+  }
+
   .card-container {
     margin: 0 10px 0 10px;
   }
@@ -844,6 +891,11 @@ footer {
   
   .scroll-x {
     padding: 20px 5px;
+  }
+
+  .conteudo > a {
+    margin: 15px 0;
+    font-size: 20px;
   }
 
   .card-container {
@@ -929,6 +981,10 @@ footer {
     padding: 10px 0px;
   }
 
+  .conteudo > a {
+    display: none;
+  }
+
   .card-container {
     margin: 0 3px 0 3px;
   }
@@ -959,27 +1015,3 @@ footer {
     font-size: 15px;
   }
 }
-
-/* @media (max-width: 435px) {
-
-  #pistas .card-back-header h3 {
-    font-size: 16px;
-  }
-
-  #pistas .card-front-header label {
-    font-size: 20px;
-  }
-
-  #pistas .card-back-body div p {
-    font-size: 14px;
-  }
-  
-  #pistas .card-back-body div label {
-    font-size: 16px;
-  }
-
-  #pistas .card-back-content {
-    padding: 14px;
-  }
-
-} */

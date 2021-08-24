@@ -235,6 +235,7 @@ function carregaEquipes() {
 }
 
 function inicializaEventosCard() {
+  // Evento de efeito flip durante click ou hover
   document.querySelectorAll(".card-container").forEach((card) => {
     card.addEventListener("mouseenter", (event) => {
       let item = event.currentTarget;
@@ -248,6 +249,32 @@ function inicializaEventosCard() {
     card.addEventListener("click", (event) => {
       let item = event.currentTarget;
       item.classList.add("flip");
+    });
+  });
+
+  // Evento de scroll horizontal nos botões laterais
+  document.querySelectorAll(".conteudo > a").forEach((botao) => {
+    botao.addEventListener("mouseup", (event) => {
+      let botao = event.target;
+      let parent = botao.parentNode;
+      let lista = parent.querySelector('.scroll-x');
+      let screenWidth = lista.clientWidth;
+
+      let aux = 310;
+      
+      if (botao.classList.contains("btn-right")) {
+        let scroll = lista.scrollLeft + screenWidth - aux;
+        lista.scrollTo({
+          left: scroll,
+          behavior: 'smooth'
+        })
+      } else if (botao.classList.contains("btn-left")) {
+        let scroll = lista.scrollLeft - screenWidth - aux;
+        lista.scrollTo({
+          left: scroll,
+          behavior: 'smooth'
+        })
+      }
     });
   });
 }
