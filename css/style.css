@@ -981,7 +981,7 @@ footer {
     padding: 10px 0px;
   }
 
-  .conteudo > a {
+  .conteudo:hover > a {
     display: none;
   }
 
