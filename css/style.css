@@ -496,6 +496,10 @@ main .carousel {
 
 /* Card piloto frente */
 
+#pilotos .card-front-header {
+  text-align: center;
+}
+
 #pilotos .card-front-header img {
   width: 100%;
   height: 100%;
@@ -570,6 +574,7 @@ main .carousel {
 #equipes .card-front-content,
 #equipes .card-back-content {
   padding: 25px;
+  height: 100%;
 }
 
 /* Card equipes frente */
@@ -985,8 +990,121 @@ footer {
     display: none;
   }
 
+  /* Responsividade dos cards das pistas */
+
   .card-container {
     margin: 0 3px 0 3px;
+  }
+
+  #pistas .card-container {
+    width: 318px;
+    height: 250px;
+  }
+
+  #pistas .card-front-content,
+  #pistas .card-back-content {
+    padding: 15px 10px;
+  }
+
+  #pistas .card-front-header img {
+    height: 50px;
+    width: 80px;
+  }
+
+  #pistas .card-front-header div {
+    height: 50px;
+  }
+  
+  #pistas .card-front-header label {
+    font-size: 23px;
+  }
+  
+  #pistas .card-front-body img {
+    max-height: 170px;
+  }
+
+  #pistas .card-back-header h3 {
+    font-size: 17px;
+  }
+  
+  #pistas .card-back-body div p {
+    font-size: 15px;
+  }
+  
+  #pistas .card-back-body div label {
+    font-size: 16px;
+  }
+
+  /* Responsividade dos cards dos pilotos */
+
+  #pilotos .card-container {
+    width: 245px;
+    height: 347px;
+  }
+
+  #pilotos .card-front-header img {
+    width: 90%;
+    height: 90%;
+  }
+
+  #pilotos .card-front-body h1 {
+    font-size: 65px;
+  }
+
+  #pilotos .card-front-body h2 {
+    font-size: 18px;
+  }
+
+  #pilotos .card-back-header h3 {
+    font-size: 17px;
+  }
+
+  #pilotos .card-back-content {
+    padding: 15px;
+  }
+
+  #pilotos .card-back-body div p {
+    padding: 0;
+  }
+
+  #pilotos .card-back-body div label {
+    font-size: 17px;
+  }
+
+  /* Responsividade dos cards dos pilotos */
+
+  #equipes .card-container {
+    width: 350px;
+    height: 295px;
+  }
+
+  #equipes .card-front-content, #equipes .card-back-content {
+    padding: 15px;
+  }
+
+  #equipes .card-front-body {
+    height: 60%;
+  }
+
+  #equipes .card-back-body {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "chefe-equipe ano-entrada"
+    "mundiais-equipe motor"
+    "prim-piloto seg-piloto"
+    "base base";
+  }
+
+  #equipes .card-back-header h3 {
+    font-size: 17px;
+  }
+
+  #equipes .card-back-body div p {
+    padding: 0;
+  }
+
+  #equipes .card-back-body div label {
+    font-size: 17px;
   }
 
   #cadastro {
