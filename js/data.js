@@ -176,7 +176,7 @@ const pistas = [
       num_voltas: "72",
       comp_circuito: "4,259 km",
       dist_corrida: "306,648 km",
-      volta_record: "Nenhuma"
+      volta_record: "1:11.097 Lewis Hamilton (2021)"
     }
   },
   {
