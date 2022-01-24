@@ -15,6 +15,36 @@ const pistas = [
     }
   },
   {
+    local: "Arábia Saudita",
+    imagens: {
+      bandeira: "arabia_saudita.png",
+      pista: "arabia_saudita.png",
+    },
+    info: {
+      nome: "Circuito Urbano de Jeddah",
+      primeiro_gp: "2021",
+      num_voltas: "50",
+      comp_circuito: "6,174 km",
+      dist_corrida: "308,045 km",
+      volta_record: "1:20.734 Lewis Hamilton (2021)"
+    }
+  },
+  {
+    local: "Austrália",
+    imagens: {
+      bandeira: "australia.png",
+      pista: "australia.png",
+    },
+    info: {
+      nome: "Circuito do Grande Prêmio de Melbourne",
+      primeiro_gp: "1996",
+      num_voltas: "58",
+      comp_circuito: "5,303 km",
+      dist_corrida: "307,574 km",
+      volta_record: "1:24.125 Michael Schumacher (2004)"
+    }
+  },
+  {
     local: "Itália",
     imagens: {
       bandeira: "italia.png",
@@ -30,18 +60,18 @@ const pistas = [
     }
   },
   {
-    local: "Portugal",
+    local: "Estados Unidos",
     imagens: {
-      bandeira: "portugal.png",
-      pista: "portugal.png",
+      bandeira: "estados_unidos.png",
+      pista: "estados_unidos2.png",
     },
     info: {
-      nome: "Autodromo Internacional do Algarve",
-      primeiro_gp: "2020",
-      num_voltas: "66",
-      comp_circuito: "4,653 km",
-      dist_corrida: "306,826 km",
-      volta_record: "1:18.750 Lewis Hamilton (2020)"
+      nome: "Autódromo Internacional de Miami",
+      primeiro_gp: "2022",
+      num_voltas: "57",
+      comp_circuito: "5,041 km",
+      dist_corrida: "308,037 km",
+      volta_record: "Nenhuma"
     }
   },
   {
@@ -90,18 +120,33 @@ const pistas = [
     }
   },
   {
-    local: "França",
+    local: "Canadá",
     imagens: {
-      bandeira: "franca.png",
-      pista: "franca.png",
+      bandeira: "canada.png",
+      pista: "canada.png",
     },
     info: {
-      nome: "Circuito Paul Ricard",
-      primeiro_gp: "1971",
-      num_voltas: "53",
-      comp_circuito: "5,842 km",
-      dist_corrida: "309,069 km",
-      volta_record: "1:32.740 Sebastian Vettel (2019)"
+      nome: "Circuito Gilles-Villeneuve",
+      primeiro_gp: "1978",
+      num_voltas: "70",
+      comp_circuito: "4,361 km",
+      dist_corrida: "305,027 km",
+      volta_record: "1:13.078 Valtteri Bottas (2019)"
+    }
+  },
+  {
+    local: "Grã Bretanha",
+    imagens: {
+      bandeira: "gra_bretanha.png",
+      pista: "gra_bretanha.png",
+    },
+    info: {
+      nome: "Circuito de Silverstone",
+      primeiro_gp: "1950",
+      num_voltas: "52",
+      comp_circuito: "5,891 km",
+      dist_corrida: "306,198 km",
+      volta_record: "1:27.097 Max Verstappen (2020)"
     }
   },
   {
@@ -120,18 +165,18 @@ const pistas = [
     }
   },
   {
-    local: "Grã Bretanha",
+    local: "França",
     imagens: {
-      bandeira: "gra_bretanha.png",
-      pista: "gra_bretanha.png",
+      bandeira: "franca.png",
+      pista: "franca.png",
     },
     info: {
-      nome: "Circuito de Silverstone",
-      primeiro_gp: "1950",
-      num_voltas: "52",
-      comp_circuito: "5,891 km",
-      dist_corrida: "306,198 km",
-      volta_record: "1:27.097 Max Verstappen (2020)"
+      nome: "Circuito Paul Ricard",
+      primeiro_gp: "1971",
+      num_voltas: "53",
+      comp_circuito: "5,842 km",
+      dist_corrida: "309,069 km",
+      volta_record: "1:32.740 Sebastian Vettel (2019)"
     }
   },
   {
@@ -266,7 +311,7 @@ const pistas = [
       num_voltas: "71",
       comp_circuito: "4,304 km",
       dist_corrida: "305,354 km",
-      volta_record: "1:18.741 Valtteri Bottas (2018)"
+      volta_record: "1:17.774 Valtteri Bottas (2021)"
     }
   },
   {
@@ -285,36 +330,6 @@ const pistas = [
     }
   },
   {
-    local: "Austrália",
-    imagens: {
-      bandeira: "australia.png",
-      pista: "australia.png",
-    },
-    info: {
-      nome: "Circuito do Grande Prêmio de Melbourne",
-      primeiro_gp: "1996",
-      num_voltas: "58",
-      comp_circuito: "5,303 km",
-      dist_corrida: "307,574 km",
-      volta_record: "1:24.125 Michael Schumacher (2004)"
-    }
-  },
-  {
-    local: "Arábia Saudita",
-    imagens: {
-      bandeira: "arabia_saudita.png",
-      pista: "arabia_saudita.png",
-    },
-    info: {
-      nome: "Circuito Urbano de Jeddah",
-      primeiro_gp: "2021",
-      num_voltas: "50",
-      comp_circuito: "6,175 km",
-      dist_corrida: "308,075 km",
-      volta_record: "Nenhuma"
-    }
-  },
-  {
     local: "Abu Dhabi",
     imagens: {
       bandeira: "abu_dhabi.png",
@@ -326,9 +341,9 @@ const pistas = [
       num_voltas: "55",
       comp_circuito: "5,554 km",
       dist_corrida: "305,355 km",
-      volta_record: "1:39.283 Lewis Hamilton (2019)"
+      volta_record: "1:26.103 Max Verstappen (2021)"
     }
-  },
+  },  
 ]
 
 const pilotos = [
@@ -342,39 +357,24 @@ const pilotos = [
     info: {
       equipe: "Mercedes",
       pais: "Reino Unido",
-      podios: "169",
+      podios: "182",
       mundiais: "7",
-      nascimento: "01/07/1985"
+      nascimento: "07/01/1985"
     }
   },
   {
     piloto: {
       nome: "Max",
       sobrenome: "Verstappen",
-      numero: "33"
+      numero: "1"
     },
     foto: "verstappen.png",
     info: {
       equipe: "Red Bull Racing",
-      pais: "Bélgica",
-      podios: "47",
-      mundiais: "Nenhum",
+      pais: "Países Baixos",
+      podios: "60",
+      mundiais: "1",
       nascimento: "30/09/1997"
-    }
-  },
-  {
-    piloto: {
-      nome: "Daniel",
-      sobrenome: "Ricciardo",
-      numero: "3"
-    },
-    foto: "riccardo.png",
-    info: {
-      equipe: "McLaren",
-      pais: "Austrália",
-      podios: "31",
-      mundiais: "Nenhum",
-      nascimento: "01/07/1989"
     }
   },
   {
@@ -387,9 +387,39 @@ const pilotos = [
     info: {
       equipe: "Ferrari",
       pais: "Mônaco",
-      podios: "12",
+      podios: "13",
       mundiais: "Nenhum",
       nascimento: "16/10/1997"
+    }
+  },
+  {
+    piloto: {
+      nome: "Daniel",
+      sobrenome: "Ricciardo",
+      numero: "3"
+    },
+    foto: "riccardo.png",
+    info: {
+      equipe: "McLaren",
+      pais: "Austrália",
+      podios: "32",
+      mundiais: "Nenhum",
+      nascimento: "01/07/1989"
+    }
+  },
+  {
+    piloto: {
+      nome: "Fernando",
+      sobrenome: "Alonso",
+      numero: "14"
+    },
+    foto: "alonso.png",
+    info: {
+      equipe: "Alpine",
+      pais: "Espanha",
+      podios: "98",
+      mundiais: "2",
+      nascimento: "29/07/1981"
     }
   },
   {
@@ -404,7 +434,7 @@ const pilotos = [
       pais: "França",
       podios: "3",
       mundiais: "Nenhum",
-      nascimento: "02/07/1996"
+      nascimento: "07/02/1996"
     }
   },
   {
@@ -419,52 +449,37 @@ const pilotos = [
       pais: "Alemanha",
       podios: "122",
       mundiais: "4",
-      nascimento: "07/03/1987"
+      nascimento: "03/07/1987"
     }
   },
   {
     piloto: {
-      nome: "Fernando",
-      sobrenome: "Alonso",
-      numero: "14"
+      nome: "Nicholas",
+      sobrenome: "Latifi",
+      numero: "6"
     },
-    foto: "alonso.png",
-    info: {
-      equipe: "Alpine",
-      pais: "Espanha",
-      podios: "97",
-      mundiais: "2",
-      nascimento: "29/07/1981"
-    }
-  },
-  {
-    piloto: {
-      nome: "Kimi",
-      sobrenome: "Räikkönen",
-      numero: "7"
-    },
-    foto: "raikkonen.png",
-    info: {
-      equipe: "Alfa Romeo Racing",
-      pais: "Finlândia",
-      podios: "103",
-      mundiais: "1",
-      nascimento: "17/10/1979"
-    }
-  },
-  {
-    piloto: {
-      nome: "George",
-      sobrenome: "Russell",
-      numero: "63"
-    },
-    foto: "russell.png",
+    foto: "latifi.png",
     info: {
       equipe: "Williams",
-      pais: "Reino Unido",
-      podios: "3",
+      pais: "Canadá",
+      podios: "Nenhum",
       mundiais: "Nenhum",
-      nascimento: "15/02/1998"
+      nascimento: "29/06/1995"
+    }
+  },
+  {
+    piloto: {
+      nome: "Valtteri",
+      sobrenome: "Bottas",
+      numero: "77"
+    },
+    foto: "bottas.png",
+    info: {
+      equipe: "Alfa Romeo",
+      pais: "Finlândia",
+      podios: "67",
+      mundiais: "Nenhum",
+      nascimento: "28/08/1989"
     }
   },
   {
@@ -484,17 +499,17 @@ const pilotos = [
   },
   {
     piloto: {
-      nome: "Valtteri",
-      sobrenome: "Bottas",
-      numero: "77"
+      nome: "George",
+      sobrenome: "Russell",
+      numero: "63"
     },
-    foto: "bottas.png",
+    foto: "russell.png",
     info: {
       equipe: "Mercedes",
-      pais: "Finlândia",
-      podios: "59",
+      pais: "Reino Unido",
+      podios: "1",
       mundiais: "Nenhum",
-      nascimento: "28/08/1989"
+      nascimento: "15/02/1998"
     }
   },
   {
@@ -507,24 +522,9 @@ const pilotos = [
     info: {
       equipe: "Red Bull Racing",
       pais: "México",
-      podios: "11",
+      podios: "15",
       mundiais: "Nenhum",
       nascimento: "26/01/1990"
-    }
-  },
-  {
-    piloto: {
-      nome: "Lando",
-      sobrenome: "Norris",
-      numero: "4"
-    },
-    foto: "norris.png",
-    info: {
-      equipe: "McLaren",
-      pais: "Reino Unido",
-      podios: "3",
-      mundiais: "Nenhum",
-      nascimento: "13/11/1999"
     }
   },
   {
@@ -537,9 +537,39 @@ const pilotos = [
     info: {
       equipe: "Ferrari",
       pais: "Espanha",
-      podios: "3",
+      podios: "6",
       mundiais: "Nenhum",
-      nascimento: "09/01/1994"
+      nascimento: "01/09/1994"
+    }
+  },
+  {
+    piloto: {
+      nome: "Lando",
+      sobrenome: "Norris",
+      numero: "4"
+    },
+    foto: "norris.png",
+    info: {
+      equipe: "McLaren",
+      pais: "Reino Unido",
+      podios: "5",
+      mundiais: "Nenhum",
+      nascimento: "13/11/1999"
+    }
+  },
+  {
+    piloto: {
+      nome: "Esteban",
+      sobrenome: "Ocon",
+      numero: "31"
+    },
+    foto: "ocon.png",
+    info: {
+      equipe: "Alpine",
+      pais: "França",
+      podios: "2",
+      mundiais: "Nenhum",
+      nascimento: "17/09/1996"
     }
   },
   {
@@ -574,47 +604,32 @@ const pilotos = [
   },
   {
     piloto: {
-      nome: "Esteban",
-      sobrenome: "Ocon",
-      numero: "31"
+      nome: "Alexander",
+      sobrenome: "Albon",
+      numero: "23"
     },
-    foto: "ocon.png",
+    foto: "albon.png",
     info: {
-      equipe: "Alpine",
-      pais: "França",
-      podios: "1",
+      equipe: "Willians",
+      pais: "Tailândia",
+      podios: "2",
       mundiais: "Nenhum",
-      nascimento: "17/09/1996"
+      nascimento: "23/03/1996"
     }
   },
   {
     piloto: {
-      nome: "Antonio",
-      sobrenome: "Giovinazzi",
-      numero: "99"
+      nome: "Guanyu",
+      sobrenome: "Zhou",
+      numero: "24"
     },
-    foto: "giovinazzi.png",
+    foto: "zhou.png",
     info: {
-      equipe: "Alfa Romeo Racing",
-      pais: "Itália",
+      equipe: "Alfa Romeo",
+      pais: "China",
       podios: "Nenhum",
       mundiais: "Nenhum",
-      nascimento: "14/12/1993"
-    }
-  },
-  {
-    piloto: {
-      nome: "Nicholas",
-      sobrenome: "Latifi",
-      numero: "6"
-    },
-    foto: "latifi.png",
-    info: {
-      equipe: "Williams",
-      pais: "Canadá",
-      podios: "Nenhum",
-      mundiais: "Nenhum",
-      nascimento: "29/06/1995"
+      nascimento: "30/05/1999"
     }
   },
   {
@@ -642,16 +657,16 @@ const equipes = [
       carro: "mercedes.png"
     },
     info: {
-      nomeCompleto: "Mercedes-AMG Petronas F1 Team",
+      nomeCompleto: "Mercedes-AMG Petronas Formula One Team",
       chefe: "Toto Wolff",
       estreia: "1970",
-      mundiais: "7",
+      mundiais: "8",
       motor: "Mercedes",
       base: "Brackley, Reino Unido"
     },
     pilotos: {
       primeiro: "Lewis Hamilton",
-      segundo: "Valtteri Bottas"
+      segundo: "George Russell"
     }
   },
   {
@@ -661,16 +676,35 @@ const equipes = [
       carro: "redbull.png"
     },
     info: {
-      nomeCompleto: "Red Bull Racing Honda",
+      nomeCompleto: "Red Bull Racing",
       chefe: "Christian Horner",
       estreia: "1997",
       mundiais: "4",
-      motor: "Honda",
+      motor: "Red Bull Motores",
       base: "Milton Keynes, Reino Unido"
     },
     pilotos: {
       primeiro: "Max Verstappen",
       segundo: "Sergio Perez"
+    }
+  },
+  {
+    nome: "Ferrari",
+    imagens: {
+      logo: "ferrari.png",
+      carro: "ferrari.png"
+    },
+    info: {
+      nomeCompleto: "Scuderia Ferrari",
+      chefe: "Mattia Binotto",
+      estreia: "1950",
+      mundiais: "16",
+      motor: "Ferrari",
+      base: "Maranello, Itália"
+    },
+    pilotos: {
+      primeiro: "Charles Leclerc",
+      segundo: "Carlos Sainz"
     }
   },
   {
@@ -693,63 +727,6 @@ const equipes = [
     }
   },
   {
-    nome: "Ferrari",
-    imagens: {
-      logo: "ferrari.png",
-      carro: "ferrari.png"
-    },
-    info: {
-      nomeCompleto: "Scuderia Ferrari Mission Winnow",
-      chefe: "Mattia Binotto",
-      estreia: "1950",
-      mundiais: "16",
-      motor: "Ferrari",
-      base: "Maranello, Itália"
-    },
-    pilotos: {
-      primeiro: "Charles Leclerc",
-      segundo: "Carlos Sainz"
-    }
-  },
-  {
-    nome: "AlphaTauri",
-    imagens: {
-      logo: "alphatauri.png",
-      carro: "alphatauri.png"
-    },
-    info: {
-      nomeCompleto: "Scuderia AlphaTauri Honda",
-      chefe: "Franz Tost",
-      estreia: "1985",
-      mundiais: "Nenhum",
-      motor: "Honda",
-      base: "Faenza, Itália"
-    },
-    pilotos: {
-      primeiro: "Pierre Gasly",
-      segundo: "Yuki Tsunoda"
-    }
-  },
-  {
-    nome: "Aston Martin",
-    imagens: {
-      logo: "astonmartin.png",
-      carro: "astonmartin.png"
-    },
-    info: {
-      nomeCompleto: "Aston Martin Cognizant F1 Team",
-      chefe: "Otmar Szafnauer",
-      estreia: "2018",
-      mundiais: "Nenhum",
-      motor: "Mercedes",
-      base: "Silverstone, Reino Unido"
-    },
-    pilotos: {
-      primeiro: "Sebastian Vettel",
-      segundo: "Lance Stroll"
-    }
-  },
-  {
     nome: "Alpine",
     imagens: {
       logo: "alpine.png",
@@ -769,22 +746,41 @@ const equipes = [
     }
   },
   {
-    nome: "Alfa Romeo",
+    nome: "AlphaTauri",
     imagens: {
-      logo: "alfaromeo.png",
-      carro: "alfaromeo.png"
+      logo: "alphatauri.png",
+      carro: "alphatauri.png"
     },
     info: {
-      nomeCompleto: "Alfa Romeo Racing ORLEN",
-      chefe: "Frédéric Vasseur",
-      estreia: "1993",
+      nomeCompleto: "Scuderia AlphaTauri",
+      chefe: "Franz Tost",
+      estreia: "1985",
       mundiais: "Nenhum",
-      motor: "Ferrari",
-      base: "Hinwil, Suíça"
+      motor: "Red Bull Motores",
+      base: "Faenza, Itália"
     },
     pilotos: {
-      primeiro: "Kimi Räikkönen",
-      segundo: "Antonio Giovinazzi"
+      primeiro: "Pierre Gasly",
+      segundo: "Yuki Tsunoda"
+    }
+  },
+  {
+    nome: "Aston Martin",
+    imagens: {
+      logo: "astonmartin.png",
+      carro: "astonmartin.png"
+    },
+    info: {
+      nomeCompleto: "Aston Martin Cognizant Formula One Team",
+      chefe: "Mike Krack",
+      estreia: "2018",
+      mundiais: "Nenhum",
+      motor: "Mercedes",
+      base: "Silverstone, Reino Unido"
+    },
+    pilotos: {
+      primeiro: "Sebastian Vettel",
+      segundo: "Lance Stroll"
     }
   },
   {
@@ -802,8 +798,27 @@ const equipes = [
       base: "Grove, Reino Unido"
     },
     pilotos: {
-      primeiro: "George Russell",
-      segundo: "Nicholas Latifi"
+      primeiro: "Nicholas Latifi",
+      segundo: "Alexander Albon"
+    }
+  },
+  {
+    nome: "Alfa Romeo",
+    imagens: {
+      logo: "alfaromeo.png",
+      carro: "alfaromeo.png"
+    },
+    info: {
+      nomeCompleto: "Alfa Romeo F1 Team ORLEN",
+      chefe: "Frédéric Vasseur",
+      estreia: "1993",
+      mundiais: "Nenhum",
+      motor: "Ferrari",
+      base: "Hinwil, Suíça"
+    },
+    pilotos: {
+      primeiro: "Valtteri Bottas",
+      segundo: "Guanyu Zhou"
     }
   },
   {
@@ -814,7 +829,7 @@ const equipes = [
     },
     info: {
       nomeCompleto: "Uralkali Haas F1 Team",
-      chefe: "	Frédéric Vasseur",
+      chefe: "Guenther Steiner",
       estreia: "2016",
       mundiais: "Nenhum",
       motor: "Ferrari",
