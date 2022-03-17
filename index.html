@@ -4,11 +4,14 @@
     <title>Fórmula 1</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="shortcut icon" href="./assets/f1_logo.svg" type="image/x-icon">
 
-    <script src="https://kit.fontawesome.com/2a358d9687.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="shortcut icon" href="./assets/f1_logo.svg" type="image/x-icon" />
+
+    <script
+      src="https://kit.fontawesome.com/2a358d9687.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript" src="./js/data.js"></script>
   </head>
   <body>
@@ -22,7 +25,7 @@
       <div class="btn-area">
         <i class="btn-menu fas fa-bars"></i>
       </div>
-  
+
       <ul class="nav">
         <li><a href="#pistas">Pistas</a></li>
         <li><a href="#pilotos">Pilotos</a></li>
@@ -34,32 +37,47 @@
       <div class="carousel">
         <div class="carousel-container">
           <div class="carousel-item animacao visivel">
-            <img src="./assets/carousel/img01-min.jpg" alt="Imagem Carrossel 01">
+            <img
+              src="./assets/carousel/img01-min.jpg"
+              alt="Imagem Carrossel 01"
+            />
           </div>
 
           <div class="carousel-item animacao">
-            <img src="./assets/carousel/img02-min.jpg" alt="Imagem Carrossel 02">
-          </div>
-          
-          <div class="carousel-item animacao">
-            <img src="./assets/carousel/img03-min.jpg" alt="Imagem Carrossel 03">
-          </div>
-
-          <div class="carousel-item animacao">
-            <img src="./assets/carousel/img04-min.jpg" alt="Imagem Carrossel 04">
+            <img
+              src="./assets/carousel/img02-min.jpg"
+              alt="Imagem Carrossel 02"
+            />
           </div>
 
           <div class="carousel-item animacao">
-            <img src="./assets/carousel/img05-min.jpg" alt="Imagem Carrossel 05">
+            <img
+              src="./assets/carousel/img03-min.jpg"
+              alt="Imagem Carrossel 03"
+            />
           </div>
-  
+
+          <div class="carousel-item animacao">
+            <img
+              src="./assets/carousel/img04-min.jpg"
+              alt="Imagem Carrossel 04"
+            />
+          </div>
+
+          <div class="carousel-item animacao">
+            <img
+              src="./assets/carousel/img05-min.jpg"
+              alt="Imagem Carrossel 05"
+            />
+          </div>
+
           <a class="btnAnterior" onclick="trocaImagem(-1)">&#10094;</a>
           <a class="btnProximo" onclick="trocaImagem(1)">&#10095;</a>
         </div>
 
         <div class="circulos-container">
           <div>
-            <span class="circulo ativo" data-circulo="0"></span> 
+            <span class="circulo ativo" data-circulo="0"></span>
           </div>
           <div>
             <span class="circulo" data-circulo="1"></span>
@@ -68,10 +86,10 @@
             <span class="circulo" data-circulo="2"></span>
           </div>
           <div>
-            <span class="circulo" data-circulo="3"></span> 
+            <span class="circulo" data-circulo="3"></span>
           </div>
           <div>
-            <span class="circulo" data-circulo="4"></span> 
+            <span class="circulo" data-circulo="4"></span>
           </div>
         </div>
       </div>
@@ -79,22 +97,29 @@
       <div class="historia">
         <h2>História</h2>
         <p>
-          A Fórmula 1 é uma corrida automobilística mundialmente famosa, que
-          teve início no final do século XIX, através de grandes campeonatos de
-          corrida que aconteciam na Europa. Grandes nomes de pilotos de corrida
-          fazem parte da história da Fórmula 1.
+          A Fórmula 1 é uma modalidade de automobilismo (corridas de carros) de
+          alta tecnologia que promove um campeonato mundial anual, bastante
+          popular, desde 1950. Esse campeonato teve origem na competição chamada
+          Grande Prêmio, que acontecia na Europa desde antes da Segunda Guerra
+          Mundial. A Fórmula 1 (F1) é regulamentada pela Federação Internacional
+          de Automobilismo (FIA), com sede em Paris.
         </p>
         <p>
-          Entre eles estão, Ayrton Senna,
-          Michael Schumacher, Alain Prost, Nelson Piquet, Juan Manuel Fangio,
-          Niki Lauda, Rubens Barrichello, Lewis Hamilton, e tantos outros
-          pilotos renomados que foram campeões ao longo dos anos.
+          Grandes nomes de pilotos de corrida fazem parte da história da Fórmula
+          1. Entre eles estão, Ayrton Senna, Michael Schumacher, Alain Prost,
+          Nelson Piquet, Juan Manuel Fangio, Niki Lauda, Rubens Barrichello,
+          Lewis Hamilton, e tantos outros pilotos renomados que foram campeões
+          ao longo dos anos.
         </p>
         <p>
-          As corridas
-          eram realizadas na Inglaterra, Mônaco, Suíça, Bélgica, França e
-          Itália, e mais tarde foi adicionada as 500 Milhas de Indianápolis, nos
-          Estados Unidos. Tornando a Fórmula 1 uma competição mundial.
+          Atualmente, cada corrida se chama Grande Prêmio de Fórmula 1, seguido
+          do nome do país em que a prova se realiza. As corridas acontecem em
+          autódromos e em alguns circuitos de rua da Europa, da Ásia, da Oceania
+          e da América. O mais famoso circuito de rua é o Grande Prêmio de
+          Mônaco, em Monte Carlo. O sistema de pontuação, que tem sido mudado
+          através dos anos, premia atualmente até o 10° colocado em cada grande
+          prêmio. Os resultados de cada corrida são transformados em pontos que,
+          somados, definem dois campeões a cada ano: pilotos e construtores.
         </p>
       </div>
 
@@ -109,14 +134,16 @@
           <label class="info-descricao">Total de pilotos</label>
         </div>
 
-        <div class="info-item">          
+        <div class="info-item">
           <div class="info-dado">--</div>
           <label class="info-descricao">Total de equipes</label>
         </div>
       </div>
 
       <div id="pistas">
-        <h2 class="titulo">Pistas <img class="img-icon" src="./assets/icones/pista.png"></h2>
+        <h2 class="titulo">
+          Pistas <img class="img-icon" src="./assets/icones/pista.png" />
+        </h2>
         <div class="conteudo">
           <a class="btn-left">&#10094;</a>
           <div id="lstPistas" class="scroll-x"></div>
@@ -125,7 +152,9 @@
       </div>
 
       <div id="pilotos">
-        <h2 class="titulo">Pilotos <img class="img-icon" src="./assets/icones/capacete.png"></h2>
+        <h2 class="titulo">
+          Pilotos <img class="img-icon" src="./assets/icones/capacete.png" />
+        </h2>
         <div class="conteudo">
           <a class="btn-left">&#10094;</a>
           <div id="lstPilotos" class="scroll-x"></div>
@@ -134,7 +163,9 @@
       </div>
 
       <div id="equipes" class="equipes">
-        <h2 class="titulo">Equipes <img class="img-icon" src="./assets/icones/equipe.png"></h2>
+        <h2 class="titulo">
+          Equipes <img class="img-icon" src="./assets/icones/equipe.png" />
+        </h2>
         <div class="conteudo">
           <a class="btn-left">&#10094;</a>
           <div id="lstEquipes" class="scroll-x"></div>
@@ -153,16 +184,28 @@
         <form id="formCadastro">
           <span class="formLine">
             <label>Nome</label>
-            <input type="text" required id="inpNome" placeholder="Insira seu nome" />
+            <input
+              type="text"
+              required
+              id="inpNome"
+              placeholder="Insira seu nome"
+            />
           </span>
 
           <span class="formLine">
             <label>E-mail</label>
-            <input type="email" required id="inpEmail" placeholder="Insira seu e-mail" />
+            <input
+              type="email"
+              required
+              id="inpEmail"
+              placeholder="Insira seu e-mail"
+            />
           </span>
 
           <span class="formLine">
-            <button id="btnForm" onclick="validacaoForm()" type="submit">Cadastrar</button>
+            <button id="btnForm" onclick="validacaoForm()" type="submit">
+              Cadastrar
+            </button>
           </span>
         </form>
       </div>
@@ -189,14 +232,14 @@
               href="https://github.com/gabrielcs04"
               target="__blank"
               class="github"
-              >
+            >
               <i class="fab fa-github"></i
             ></a>
           </label>
         </span>
       </div>
     </footer>
-    
+
     <script type="text/javascript" src="./js/scripts.js"></script>
   </body>
 </html>
