@@ -240,21 +240,6 @@ const pistas = [
     }
   },
   {
-    local: "Rússia",
-    imagens: {
-      bandeira: "russia.png",
-      pista: "russia.png",
-    },
-    info: {
-      nome: "Autódromo de Sóchi",
-      primeiro_gp: "2014",
-      num_voltas: "53",
-      comp_circuito: "5,848 km",
-      dist_corrida: "309,745 km",
-      volta_record: "1:35.761 Lewis Hamilton (2019)"
-    }
-  },
-  {
     local: "Singapura",
     imagens: {
       bandeira: "singapura.png",
@@ -634,17 +619,17 @@ const pilotos = [
   },
   {
     piloto: {
-      nome: "Nikita",
-      sobrenome: "Mazepin",
-      numero: "9"
+      nome: "Kevin",
+      sobrenome: "Magnussen",
+      numero: "20"
     },
-    foto: "mazepin.png",
+    foto: "magnussen.png",
     info: {
       equipe: "Haas F1 Team",
-      pais: "Rússia",
-      podios: "Nenhum",
+      pais: "Dinamarca",
+      podios: "1",
       mundiais: "Nenhum",
-      nascimento: "02/03/1999"
+      nascimento: "05/10/1992"
     }
   },
 ]
@@ -734,7 +719,7 @@ const equipes = [
     },
     info: {
       nomeCompleto: "Alpine F1 Team",
-      chefe: "Davide Brivio",
+      chefe: "Otmar Szafnauer",
       estreia: "1986",
       mundiais: "2",
       motor: "Renault",
@@ -837,7 +822,7 @@ const equipes = [
     },
     pilotos: {
       primeiro: "Mick Schumacher",
-      segundo: "Nikita Mazepin"
+      segundo: "Kevin Magnussen"
     }
   },
 ]
